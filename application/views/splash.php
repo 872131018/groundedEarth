@@ -42,8 +42,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="container">
       <div class="row">
         <div class="one-half column">
-          <h4 class="hero-heading">Stop coding non-responsive sites. Let users view sites from anywhere.</h4>
-          <a class="button button-primary" href="http://getskeleton.com">Try Skeleton</a>
+          <h4 class="hero-heading">Start letting you personality speak for itself.</h4>
+          <a class="button button-primary" id="customize">Customize Design</a>
         </div>
         <div class="one-half column phones">
           <img class="phone" src="images/iphone.png">
@@ -94,5 +94,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       </div>
     </div>
   </div>
+	<?php /*
+	* Must load the external sources first
+	*/ ?>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<?php /*
+	* Then load the internal sources second
+	*/ ?>
+	<?php /*
+	* Load the driver for execution
+	*/ ?>
+	<script type="text/javascript" src="js/splashDriver.js"></script>
 </body>
 </html>

@@ -1,0 +1,22 @@
+.circle {
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+}
+#circle1 {
+  background: green;
+}
+#circle2 {
+  background: red;
+}
+#circle3 {
+  background: blue;
+}
+/*
+* Set position of the svg
+*/
+#svgWrapper {
+	position: absolute;
+	top: -150px;
+	left: -200px;
+}
