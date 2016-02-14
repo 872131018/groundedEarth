@@ -20,7 +20,8 @@ class Splash extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('splash');
+		//$this->load->view('splash');
+		$this->load->view('editor');
 	}
 
 	public function editor()
