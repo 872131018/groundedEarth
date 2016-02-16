@@ -33,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php /*
 	* Favicon
 	*/ ?>
-  <link rel="icon" type="image/png" href="S<?php echo base_url(); ?>keleton-2.0.4/images/favicon.png">
+  <link rel="icon" type="image/png" href="S<?php echo base_url(); ?>skeleton-2.0.4/images/favicon.png">
 </head>
 <body>
 	<?php /*
@@ -63,7 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php /*
 	* Then load the internal sources second
 	*/ ?>
-	<script type="text/javascript" src="slick-1.5.9/slick/slick.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>slick-1.5.9/slick/slick.min.js"></script>
 	<?php /*
 	* Load the driver for execution
 	*/ ?>

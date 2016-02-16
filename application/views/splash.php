@@ -22,16 +22,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php /*
 	* CSS
 	*/ ?>
-<<<<<<< Updated upstream
   <link rel="stylesheet" href="<?php echo base_url(); ?>Skeleton-2.0.4/css/normalize.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>Skeleton-2.0.4/css/skeleton.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>css/custom.css">
-=======
-  <link rel="stylesheet" href="Skeleton-2.0.4/css/normalize.css">
-  <link rel="stylesheet" href="Skeleton-2.0.4/css/skeleton.css">
-	<link rel="stylesheet" href="slick-1.5.9/slick/slick.css">
-  <link rel="stylesheet" href="css/custom.css">
->>>>>>> Stashed changes
 	<?php /*
 	* Scripts
 	*/ ?>
