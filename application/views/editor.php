@@ -22,10 +22,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php /*
 	* CSS
 	*/ ?>
-  <link rel="stylesheet" href="//localhost:8888/nukleusDesign/Skeleton-2.0.4/css/normalize.css">
-  <link rel="stylesheet" href="//localhost:8888/nukleusDesign/Skeleton-2.0.4/css/skeleton.css">
-  <link rel="stylesheet" href="//localhost:8888/nukleusDesign/css/custom.css">
-	<link rel="stylesheet" href="//localhost:8888/nukleusDesign/css/styles.css">
+  <link rel="stylesheet" href="Skeleton-2.0.4/css/normalize.css">
+  <link rel="stylesheet" href="Skeleton-2.0.4/css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/styles.css">
 	<?php /*
 	* Scripts
 	*/ ?>
@@ -33,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php /*
 	* Favicon
 	*/ ?>
-  <link rel="icon" type="image/png" href="//localhost:8888/nukleusDesign/Skeleton-2.0.4/images/favicon.png">
+  <link rel="icon" type="image/png" href="Skeleton-2.0.4/images/favicon.png">
 </head>
 <body>
 	<?php /*
@@ -66,6 +66,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php /*
 	* Load the driver for execution
 	*/ ?>
-	<script type="text/javascript" src="//localhost:8888/nukleusDesign/js/editorDriver.js"></script>
+	<script type="text/javascript" src="js/editorDriver.js"></script>
 </body>
 </html>
