@@ -22,10 +22,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php /*
 	* CSS
 	*/ ?>
-  <link rel="stylesheet" href="Skeleton-2.0.4/css/normalize.css">
-  <link rel="stylesheet" href="Skeleton-2.0.4/css/skeleton.css">
-  <link rel="stylesheet" href="css/custom.css">
-	<link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>Skeleton-2.0.4/css/normalize.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>Skeleton-2.0.4/css/skeleton.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>css/custom.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/styles.css">
 	<?php /*
 	* Scripts
 	*/ ?>
@@ -33,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php /*
 	* Favicon
 	*/ ?>
-  <link rel="icon" type="image/png" href="Skeleton-2.0.4/images/favicon.png">
+  <link rel="icon" type="image/png" href="S<?php echo base_url(); ?>keleton-2.0.4/images/favicon.png">
 </head>
 <body>
 	<?php /*
@@ -66,6 +66,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php /*
 	* Load the driver for execution
 	*/ ?>
-	<script type="text/javascript" src="js/editorDriver.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>js/editorDriver.js"></script>
 </body>
 </html>

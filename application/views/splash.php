@@ -22,9 +22,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php /*
 	* CSS
 	*/ ?>
-  <link rel="stylesheet" href="Skeleton-2.0.4/css/normalize.css">
-  <link rel="stylesheet" href="Skeleton-2.0.4/css/skeleton.css">
-  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>Skeleton-2.0.4/css/normalize.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>Skeleton-2.0.4/css/skeleton.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>css/custom.css">
 	<?php /*
 	* Scripts
 	*/ ?>
@@ -32,7 +32,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php /*
 	* Favicon
 	*/ ?>
-  <link rel="icon" type="image/png" href="Skeleton-2.0.4/images/favicon.png">
+  <link rel="icon" type="image/png" href="<?php echo base_url(); ?>Skeleton-2.0.4/images/favicon.png">
 </head>
 <body>
 	<?php /*
@@ -104,6 +104,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php /*
 	* Load the driver for execution
 	*/ ?>
-	<script type="text/javascript" src="js/splashDriver.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>js/splashDriver.js"></script>
 </body>
 </html>
