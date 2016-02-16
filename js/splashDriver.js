@@ -6,7 +6,7 @@ $(document).ready(function()
     {
       case 'customize':
         $form = $('<form>', {
-          action: window.location.href+"index.php/splash/editor"
+          action: window.location.href+"/splash/editor"
         });
         $form.submit();
         break;
