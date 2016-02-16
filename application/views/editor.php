@@ -24,6 +24,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	*/ ?>
   <link rel="stylesheet" href="<?php echo base_url(); ?>Skeleton-2.0.4/css/normalize.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>Skeleton-2.0.4/css/skeleton.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>slick-1.5.9/slick/slick.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>slick-1.5.9/slick/slick-theme.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>css/custom.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/styles.css">
 	<?php /*
@@ -39,6 +41,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php /*
 	* Primary Page Layout
 	*/ ?>
+	<div class="section values">
+    <div class="container">
+      <div class="row">
+        <div class="one-half column value">
+          <h2 class="value-multiplier">Select a design on the right</h2>
+          <h5 class="value-heading">Dont Worry!</h5>
+          <p class="value-description">You'll be able to customize it soon ;)</p>
+        </div>
+				<div class="one-half column phones">
+					<div class="lazy">
+						<?php foreach($images as $key => $value){
+							switch($value)
+							{
+								case ".":
+								case "..":
+									break;
+								default:
+									$url = base_url()."images/thumbnails/".$value;
+									echo "<img class=\"phones\"data-lazy=\"".$url."\"/>";
+									break;
+							}
+						} ?>
+					</div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="section hero">
     <div class="container">
       <div class="row">
@@ -50,7 +79,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
         <div class="one-half column phones">
 					<div id="svgWrapper">
-						<?php echo file_get_contents("images/skull_redraw_020416-3.svg"); ?>
+						<?php //echo file_get_contents("images/skull_redraw_020416-3.svg"); ?>
 					</div>
         </div>
       </div>

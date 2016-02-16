@@ -25,6 +25,13 @@ class Splash extends CI_Controller {
 
 	public function editor()
 	{
-		$this->load->view('editor');
+		/*
+		* Get list of thumbnail images
+		*/
+		$images = scandir(getcwd()."/images/thumbnails/");
+		$data = array(
+			'images' => $images,
+    );
+		$this->load->view('editor', $data);
 	}
 }
