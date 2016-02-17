@@ -26,9 +26,35 @@ class Splash extends CI_Controller {
 	public function editor()
 	{
 		/*
-		* Get list of thumbnail images
+		* Get list of items in the directory
 		*/
 		$images = scandir(getcwd()."/images/thumbnails/");
+		/*
+		* Clean up any values you dont want to show
+		*/
+		foreach($images as $key => $value)
+		{
+			switch($value)
+			{
+				case ".":
+				case "..":
+				case ".DS_Store":
+					unset($images[$key]);
+					break;
+				default:
+					break;
+			}
+			/*
+			* Unset all png files
+			*/
+			if(substr($value, -3) == "png")
+			{
+				unset($images[$key]);
+			}
+		}
+		/*
+		* Each item in data will be variable in view
+		*/
 		$data = array(
 			'images' => $images,
     );

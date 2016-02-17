@@ -3,11 +3,7 @@ $(document).ready(function()
   /*
   * Init the slick slider in the design selector
   */
-  $('.lazy').slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  });
+  $('.banner').unslider();
   /*
   * Track the color that was clicked on as a Global
   */

@@ -22,10 +22,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php /*
 	* CSS
 	*/ ?>
-  <link rel="stylesheet" href="<?php echo base_url(); ?>Skeleton-2.0.4/css/normalize.css">
-  <link rel="stylesheet" href="<?php echo base_url(); ?>Skeleton-2.0.4/css/skeleton.css">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>slick-1.5.9/slick/slick.css">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>slick-1.5.9/slick/slick-theme.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>resources/Skeleton-2.0.4/css/normalize.css">
+  <link rel="stylesheet" href="<?php echo base_url(); ?>resources/Skeleton-2.0.4/css/skeleton.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>resources/unslider-master/dist/css/unslider.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>resources/unslider-master/dist/css/unslider-dots.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>css/custom.css">
 	<?php /*
 	* Scripts
@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php /*
 	* Favicon
 	*/ ?>
-  <link rel="icon" type="image/png" href="<?php echo base_url(); ?>Skeleton-2.0.4/images/favicon.png">
+  <link rel="icon" type="image/png" href="<?php echo base_url(); ?>resources/Skeleton-2.0.4/images/favicon.png">
 </head>
 <body>
 	<?php /*
@@ -103,7 +103,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php /*
 	* Then load the internal sources second
 	*/ ?>
-	<script type="text/javascript" src="<?php echo base_url(); ?>slick-1.5.9/slick/slick.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>resources/unslider-master/dist/js/unslider-min.js"></script>
 	<?php /*
 	* Load the driver for execution
 	*/ ?>
