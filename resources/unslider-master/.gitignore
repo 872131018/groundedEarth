@@ -1,4 +1,0 @@
-*.esproj
-.DS_Store
-.codekit-cache
-node_modules

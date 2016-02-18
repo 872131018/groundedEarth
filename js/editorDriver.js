@@ -3,7 +3,7 @@ $(document).ready(function()
   /*
   * Init the slick slider in the design selector
   */
-  $('.banner').unslider();
+  //$('.slider').unslider();
   /*
   * Track the color that was clicked on as a Global
   */

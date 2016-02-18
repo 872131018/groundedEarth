@@ -24,13 +24,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	*/ ?>
   <link rel="stylesheet" href="<?php echo base_url(); ?>resources/Skeleton-2.0.4/css/normalize.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>resources/Skeleton-2.0.4/css/skeleton.css">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>resources/unslider-master/dist/css/unslider.css">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>resources/unslider-master/dist/css/unslider-dots.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>resources/slick-1.5-2.9/slick/slick.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>resources/slick-1.5-2.9/slick/slick-theme.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>css/custom.css">
-	<?php /*
-	* Scripts
-	*/ ?>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<?php /*
 	* Favicon
 	*/ ?>
@@ -99,11 +95,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php /*
 	* Must load the external sources first
 	*/ ?>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<?php /*
 	* Then load the internal sources second
 	*/ ?>
-	<script type="text/javascript" src="<?php echo base_url(); ?>resources/unslider-master/dist/js/unslider-min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>resources/slick-1.5-2.9/slick/slick.js"></script>
 	<?php /*
 	* Load the driver for execution
 	*/ ?>
