@@ -26,7 +26,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <link rel="stylesheet" href="<?php echo base_url(); ?>resources/Skeleton-2.0.4/css/skeleton.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>resources/slick-1.5-2.9/slick/slick.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>resources/slick-1.5-2.9/slick/slick-theme.css">
-  <link rel="stylesheet" href="<?php echo base_url(); ?>css/custom.css">
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/styles.css">
 	<?php /*
 	* Favicon
@@ -40,19 +39,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="section values">
     <div class="container">
       <div class="row">
-        <div class="one-half column value">
-          <h2 class="value-multiplier">Select a design on the right</h2>
+        <div class="one-half column">
+          <h2 class="value-multiplier">Select a design.</h2>
           <h5 class="value-heading">Dont Worry!</h5>
           <p class="value-description">You'll be able to customize it soon ;)</p>
         </div>
-				<div class="one-half column phones">
+				<div class="one-half column">
 					<div class="slider">
-						<div>
-							<?php foreach($images as $key => $value) {
-									$url = base_url()."images/thumbnails/".$value;
-									echo "<img src=\"".$url."\"/>";
-								} ?>
-						</div>
+						<?php foreach($images as $key => $value) {
+								$url = base_url()."images/thumbnails/".$value;
+								echo "<div><img src=\"".$url."\"/></div>";
+							} ?>
 					</div>
         </div>
       </div>

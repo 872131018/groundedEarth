@@ -44,13 +44,6 @@ class Splash extends CI_Controller {
 				default:
 					break;
 			}
-			/*
-			* Unset all png files
-			*/
-			if(substr($value, -3) == "png")
-			{
-				unset($images[$key]);
-			}
 		}
 		/*
 		* Each item in data will be variable in view

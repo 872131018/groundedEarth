@@ -22,11 +22,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php /*
 	* CSS
 	*/ ?>
-  <link rel="stylesheet" href="<?php echo base_url(); ?>resources/Skeleton-2.0.4/css/normalize.css">
-  <link rel="stylesheet" href="<?php echo base_url(); ?>resources/Skeleton-2.0.4/css/skeleton.css">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>resources/slick-1.5-2.9/slick/slick.css">
-	<link rel="stylesheet" href="<?php echo base_url(); ?>resources/slick-1.5-2.9/slick/slick-theme.css">
-  <link rel="stylesheet" href="<?php echo base_url(); ?>css/custom.css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css"/>
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>resources/Skeleton-2.0.4/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>resources/Skeleton-2.0.4/css/skeleton.css">
 	<?php /*
 	* Favicon
 	*/ ?>
@@ -86,20 +85,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="one-half column category">
           <img class="u-max-full-width" src="images/placeholder.png">
         </div>
-        <div class="one-half column category">
-          <img class="u-max-full-width" src="images/placeholder.png">
-        </div>
       </div>
     </div>
   </div>
 	<?php /*
 	* Must load the external sources first
 	*/ ?>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
 	<?php /*
 	* Then load the internal sources second
 	*/ ?>
-	<script type="text/javascript" src="<?php echo base_url(); ?>resources/slick-1.5-2.9/slick/slick.js"></script>
 	<?php /*
 	* Load the driver for execution
 	*/ ?>
