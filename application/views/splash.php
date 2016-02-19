@@ -26,6 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css"/>
   <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>resources/Skeleton-2.0.4/css/normalize.css">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>resources/Skeleton-2.0.4/css/skeleton.css">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/styles.css">
 	<?php /*
 	* Favicon
 	*/ ?>
@@ -35,7 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php /*
 	* Primary Page Layout
 	*/ ?>
-  <div class="section">
+  <div class="section typeA">
     <div class="container">
       <div class="row">
         <div class="one-half column">
