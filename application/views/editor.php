@@ -36,7 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php /*
 	* Primary Page Layout
 	*/ ?>
-	<div class="section values">
+	<div class="section  typeA">
     <div class="container">
       <div class="row">
         <div class="one-half column">
@@ -48,25 +48,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="slider">
 						<?php foreach($images as $key => $value) {
 								$url = base_url()."images/thumbnails/".$value;
-								echo "<div><img src=\"".$url."\"/></div>";
+								echo "<div><img src=\"".$url."\"/ data-delegate=\"design\"></div>";
 							} ?>
 					</div>
         </div>
       </div>
     </div>
   </div>
-  <div class="section hero">
+  <div class="section">
     <div class="container">
       <div class="row">
         <div class="one-half column">
-          <h4 class="hero-heading">Swap some colors.</h4>
-					<div class="circle" id="circle1"></div>
-					<div class="circle" id="circle2"></div>
-					<div class="circle" id="circle3"></div>
+          <h4 class="hero-heading">Select a color.</h4>
+					<div class="circle" id="circle1" data-delegate="color" data-color="red"></div>
+					<div class="circle" id="circle2" data-delegate="color" data-color="green"></div>
+					<div class="circle" id="circle3" data-delegate="color" data-color="blue"></div>
         </div>
-        <div class="one-half column phones">
-					<div id="svgWrapper">
-						<?php //echo file_get_contents("images/skull_redraw_020416-3.svg"); ?>
+        <div class="one-half column">
+					<h4 class="hero-heading">Change a color.</h4>
+					<div id="svgContainer">
 					</div>
         </div>
       </div>
