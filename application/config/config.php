@@ -36,7 +36,7 @@ $config['base_url'] = 'http://73.243.194.169/nukleusDesign/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = '';
+$config['index_page'] = 'index.php';
 
 /*
 |--------------------------------------------------------------------------
