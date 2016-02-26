@@ -6,6 +6,10 @@ class SaveEmail extends CI_Controller
 	public function index()
 	{
 		/*
+    *The factory is where you put the models to work and manages them
+    */
+    $this->load->library("email_factory");
+		/*
 		*Each key of $data will be available as variable in view
 		*TODO: Convert to using an object rather than an array
 		*/
