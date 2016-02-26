@@ -23,8 +23,7 @@ class email_factory
 	public function saveEmail($passedEmail="")
 	{
 		/*
-		*Empty email model to create and commit
-    *New comments wont have an id or a timestamp, database handles that
+    *New emails wont have an id or a timestamp, database handles that
 		*/
 		$this->_ci->email_model->setEmail($passedEmail);
     return $this->_ci->email_model->commit();

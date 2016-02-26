@@ -18,7 +18,8 @@ class SaveEmail extends CI_Controller
 		*TODO: Convert to using an object rather than an array
 		*/
 		$email = $this->input->post("email");
-		$result = $this->email_factory->saveEmail($email);
+		$this->email_factory->saveEmail($email);
+		$result = $this->email_factory->saveEmail();
 		/*
 		* Set content type to json and send result
 		*/

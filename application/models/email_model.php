@@ -28,9 +28,7 @@ class Email_Model extends CI_Model
 		*TODO: try to pass the query $this to remove need for an array
 		*/
     $model = array(
-      'id' => $this->id,
-			'email' => $this->email,
-			'signedUpAt' => $this->signedUpAt
+      'email' => $this->email
     );
 		/*
 		*If the model has an id, then it already exists in the database
