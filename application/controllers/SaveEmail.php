@@ -5,7 +5,7 @@ class SaveEmail extends CI_Controller
 {
 	public function __construct()
   {
-    parent::construct();
+    parent::__construct();
 		/*
     *The factory is where you put the models to work and manages them
     */
