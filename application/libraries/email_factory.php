@@ -1,7 +1,7 @@
 <?php
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class emailFactory
+class email_factory
 {
   private $_ci;
 
