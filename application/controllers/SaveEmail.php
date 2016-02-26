@@ -17,7 +17,7 @@ class SaveEmail extends CI_Controller
 		*Each key of $data will be available as variable in view
 		*TODO: Convert to using an object rather than an array
 		*/
-		$result = $this->email_factory->saveEmail($passedEmail);
+		$result = $this->email_factory->SaveEmail($passedEmail);
 		/*
 		* Set content type to json and send result
 		*/
