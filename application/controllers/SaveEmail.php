@@ -3,14 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class SaveEmail extends CI_Controller
 {
-	public function __construct()
-  {
-    parent::__construct();
-		/*
-    *The factory is where you put the models to work and manages them
-    */
-    $this->load->library("email_factory");
-  }
 	public function index()
 	{
 		/*
