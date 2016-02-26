@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class SaveEmail extends CI_Controller
 {
-	public function construct()
+	public function __construct()
   {
     parent::construct();
 		/*
