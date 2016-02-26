@@ -9,7 +9,7 @@ class SaveEmail extends CI_Controller
 		/*
     *The factory is where you put the models to work and manages them
     */
-    $this->load->library("emailFactory");
+    $this->load->library("email_factory");
   }
 	public function index()
 	{
@@ -17,7 +17,7 @@ class SaveEmail extends CI_Controller
 		*Each key of $data will be available as variable in view
 		*TODO: Convert to using an object rather than an array
 		*/
-		$result = $this->emailfactory->saveEmail($passedEmail, $passedType);
+		$result = $this->email_factory->saveEmail($passedEmail, $passedType);
 		/*
 		* Set content type to json and send result
 		*/
