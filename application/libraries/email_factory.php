@@ -5,7 +5,7 @@ class Email_factory
 {
   private $_ci;
 
-  function __construct()
+  public function __construct()
   {
     /*
 		*On construct get an instance of codeigniter so we can access it
