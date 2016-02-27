@@ -1,7 +1,7 @@
 <?php
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Email_Model extends CI_Model
+class Email_model extends CI_Model
 {
 	/*
   * A private variable to represent each column in the database
@@ -10,7 +10,7 @@ class Email_Model extends CI_Model
   private $email;
 	private $signedUpAt;
 
-  function __construct()
+  public function __construct()
   {
     parent::__construct();
   }
