@@ -40,7 +40,7 @@ return [
     */
 
     //'url' => 'http://localhost',
-    'url' => 'http://73.243.194.169:82/groundedEarthMothership/public',
+    'url' => env('APP_URL', 'http://localhost'),
 
     /*
     |--------------------------------------------------------------------------
