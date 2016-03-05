@@ -1,5 +1,12 @@
 <?php
-
+/*
+* Email namespace for laravel model
+*/
+use App\Email;
+/*
+* Load the request namespace for handling post
+*/
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Routes File
@@ -18,7 +25,15 @@ Route::get('/', function () {
       'base_url' => URL::to('/')
   ]);
 });
+/*
+* On email post save and return
+*/
 Route::post('/email', function (Request $request) {
+
+  $email = new Email;
+  $email->email = $request->email;
+  $email->save();
+
   return "hello from the mothership";
     //return view('welcome');
 });
