@@ -18,7 +18,7 @@ Route::get('/', function () {
       'base_url' => URL::to('/')
   ]);
 });
-Route::post('/email', function () {
+Route::post('/email', function (Request $request) {
   return "hello from the mothership";
     //return view('welcome');
 });
