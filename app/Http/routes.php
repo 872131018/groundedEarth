@@ -18,31 +18,24 @@ use Illuminate\Http\Request;
 |
 */
 /*
-* Show the list of emails
-*/
-Route::get('/', function () {
-  return view('home', [
-      'base_url' => URL::to('/')
-  ]);
-});
-/*
-* On email post save and return
-*/
-Route::post('/email', function (Request $request) {
-
-  $email = new Email;
-  $email->email = $request->email;
-  $email->save();
-
-  return "hello from the mothership";
-    //return view('welcome');
-});
-/*
 Route::get('/', function () {
     return view('welcome');
 });
 */
+/*
+* Show the list of emails
+*/
+Route::get('/', function () {
 
+  return view('home', [
+      'base_url' => URL::to('/'),
+      'emails' => Email::all()
+  ]);
+});
+/*
+* Save the email through post
+*/
+Route::post('/email', 'EmailController@save_email');
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -55,5 +48,15 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+  /*
+  * Routes for authentication
+  */
+  Route::get('auth/login', 'Auth\AuthController@getLogin');
+  Route::post('auth/login', 'Auth\AuthController@postLogin');
+  Route::get('auth/logout', 'Auth\AuthController@getLogout');
+  /*
+  * Routes for registration
+  */
+  Route::get('auth/register', 'Auth\AuthController@getRegister');
+  Route::post('auth/register', 'Auth\AuthController@postRegister');
 });

@@ -19,16 +19,16 @@
 	<?php /*
 	* CSS
 	*/ ?>
-  <link rel="stylesheet" type="text/css" href="<?php echo $base_url ?>/resources/Skeleton-2.0.4/css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="<?php echo $base_url ?>/resources/Skeleton-2.0.4/css/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo getenv("APP_URL") ?>Skeleton-2.0.4/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo getenv("APP_URL") ?>Skeleton-2.0.4/css/skeleton.css">
 	<?php /*
 	* Page CSS
 	*/ ?>
-	<link rel="stylesheet" href="<?php echo $base_url ?>/css/styles.css">
+	<link rel="stylesheet" href="<?php echo getenv("APP_URL") ?>css/styles.css">
 	<?php /*
 	* Favicon
 	*/ ?>
-  <link rel="icon" type="image/png" href="<?php echo $base_url ?>/resources/Skeleton-2.0.4/images/favicon.png">
+  <link rel="icon" type="image/png" href="<?php echo getenv("APP_URL") ?>Skeleton-2.0.4/images/favicon.png">
 </head>
 <body>
   @yield('content')
