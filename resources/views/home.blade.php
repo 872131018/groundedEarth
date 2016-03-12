@@ -1,31 +1,20 @@
-  @extends('app')
+@extends('layouts.app')
 
-  @section('content')
-	<?php /*
-	* Primary Page Layout
-	*/ ?>
-  <div class="section">
-    <div class="container">
-      <div class="row">
-        <div class="twelve columns">
-          <ul>
-            @foreach ($emails as $email)
-              <li>{{ $email->email }}</li>
-            @endforeach
-          </ul>
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="panel panel-default">
+                <div class="panel-heading">Dashboard</div>
+
+                <div class="panel-body">
+                    You are logged in!
+                    @foreach ($emails as $email)
+                      {{ $email }}
+                    @endforeach
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-	<?php /*
-	* Must load the external sources first
-	*/ ?>
-	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-	<?php /*
-	* Then load the internal sources second
-	*/ ?>
-	<?php /*
-	* Load the driver for execution
-	*/ ?>
-	<script type="text/javascript" src="{{ $base_url }}/js/splashDriver.js"></script>
-  @endsection
+</div>
+@endsection

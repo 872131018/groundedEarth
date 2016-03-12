@@ -22,15 +22,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 */
-/*
-* Show the list of emails
-*/
 Route::get('/', function () {
-
-  return view('home', [
-      'base_url' => URL::to('/'),
-      'emails' => Email::all()
-  ]);
+    return redirect('/home');
 });
 /*
 * Save the email through post
@@ -46,17 +39,7 @@ Route::post('/email', 'EmailController@save_email');
 | kernel and includes session state, CSRF protection, and more.
 |
 */
-
-Route::group(['middleware' => ['web']], function () {
-  /*
-  * Routes for authentication
-  */
-  Route::get('auth/login', 'Auth\AuthController@getLogin');
-  Route::post('auth/login', 'Auth\AuthController@postLogin');
-  Route::get('auth/logout', 'Auth\AuthController@getLogout');
-  /*
-  * Routes for registration
-  */
-  Route::get('auth/register', 'Auth\AuthController@getRegister');
-  Route::post('auth/register', 'Auth\AuthController@postRegister');
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+    Route::get('/home', 'HomeController@index');
 });
