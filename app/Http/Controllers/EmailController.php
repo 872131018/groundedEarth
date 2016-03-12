@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+/*
+* Email namespace for laravel model
+*/
+use App\Email;
 
 class EmailController extends Controller
 {
