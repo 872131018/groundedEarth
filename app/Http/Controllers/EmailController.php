@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
+use Illuminate\Http\Request;
 /*
 * Email namespace for laravel model
 */
@@ -12,7 +11,7 @@ use App\Email;
 
 class EmailController extends Controller
 {
-    public function save_email()
+    public function save_email(Request $request)
     {
       /*
       * Create a new email model
