@@ -8,10 +8,12 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
-                    @foreach ($emails as $email)
-                      {{ $email }}
-                    @endforeach
+                  You are logged in!
+                  <ul>
+                  @foreach ($emails as $email)
+                    <li>{{ $email->email }}</li>
+                  @endforeach
+                  </ul>
                 </div>
             </div>
         </div>
