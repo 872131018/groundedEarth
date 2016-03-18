@@ -7,32 +7,35 @@ use Illuminate\Http\Request;
 /*
 * Email namespace for laravel model
 */
-use App\Email;
+use App\Inquiry;
 
-class EmailController extends Controller
+class InquiryController extends Controller
 {
   /*
   * Instance of email class for private use
   */
-  protected $email;
+  protected $inquiry;
   /*
   * Use depency injection to bring in class
   */
-  public function __construct(Email $email)
+  public function __construct(Inquiry $inquiry)
   {
-    $this->email = $email;
+    $this->inquiry = $inquiry;
   }
 
-  public function save_email(Request $request)
+  public function save(Request $request)
   {
     /*
     * Set the models data with request data
     */
-    $this->email->email = $request->email;
+    $this->inquiry->email = $request->email;
+    $this->inquiry->name = $request->name;
+    $this->inquiry->city = $request->city;
+    $this->inquiry->state = $request->state;
     /*
     * Eloquent magic for inserting and white list values
     */
-    if($this->email->save()) {
+    if($this->inquiry->save()) {
       $result = "true";
     }
     else {

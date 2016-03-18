@@ -28,7 +28,7 @@ Route::get('/', function () {
 /*
 * Save the email through post
 */
-Route::post('/email', 'EmailController@save_email');
+Route::post('/inquiry', 'InquiryController@save');
 /*
 |--------------------------------------------------------------------------
 | Application Routes

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 /*
 * Include email model
 */
-use App\Email;
+use App\Inquiry;
 
 class HomeController extends Controller
 {
@@ -30,7 +30,7 @@ class HomeController extends Controller
     {
         return view('home', [
             'base_url' => getenv("APP_URL"),
-            'emails' => Email::all()
+            'inquiries' => Inquiry::all()
         ]);
         //return view('home');
     }

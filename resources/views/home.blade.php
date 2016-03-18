@@ -10,8 +10,8 @@
                 <div class="panel-body">
                   You are logged in!
                   <ul>
-                  @foreach ($emails as $email)
-                    <li>{{ $email->email }}</li>
+                  @foreach ($inquiries as $inquiry)
+                    <li>{{ $inquiry }}</li>
                   @endforeach
                   </ul>
                 </div>
