@@ -23,7 +23,19 @@ Route::get('/', function () {
 });
 */
 Route::get('/', function () {
-    return redirect('/home');
+  $images = [
+    'bear.png',
+    'buffalo.png',
+    'cougar.png',
+    'mountains.png',
+    'skull.png',
+    'wolf.png'
+  ];
+
+  return view('index', [
+      'base_url' => getenv("APP_URL"),
+      'images' => $images
+  ]);
 });
 /*
 * Save the email through post
