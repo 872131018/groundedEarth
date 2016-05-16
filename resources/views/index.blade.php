@@ -53,19 +53,6 @@
         </div>
       </div>
       <div class="row">
-        <div class="twelve columns">
-          <div id="Unslider" class="unslider">
-            <ul>
-              @foreach($images as $key => $value)
-                <li class='glide__slide'>
-                  <img src='{{ $base_url }}images/{{ $value }}'
-                </li>
-              @endforeach
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="row">
         <div class="twelve coulmns">
           <div><h4>Want to join the mailing list?</h4></div>
           <div>
@@ -79,6 +66,39 @@
           </div>
         </div>
       </diV>
+      <div class="row">
+        <div class="twelve columns">
+          <div id="design_slider" class="unslider">
+            <ul>
+              @foreach($designs as $key => $value)
+                <li class='glide__slide'>
+                  <img src='{{ $base_url }}images/designs/{{ $value }}'
+                </li>
+              @endforeach
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve columns">
+          <div><h4>Have an idea?</h4></div>
+          <div><h4>We can help you create it!</h4></div>
+          <div>We are dedicated to getting you the creative design you have always wanted.</div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="twelve columns">
+        <div id="mockup_slider" class="unslider">
+          <ul>
+            @foreach($mockups as $key => $value)
+              <li class='glide__slide'>
+                <img src='{{ $base_url }}images/mockups/{{ $value }}'
+              </li>
+            @endforeach
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
   <?php /*

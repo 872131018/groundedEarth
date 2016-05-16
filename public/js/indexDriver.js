@@ -7,7 +7,13 @@ $(document).ready()
   /*
   * Init the design slider
   */
-  $('#Unslider').unslider({
+  $('#design_slider').unslider({
+    autoplay: true
+  });
+  /*
+  * Init the mockup slider
+  */
+  $('#mockup_slider').unslider({
     autoplay: true
   });
 	/*
