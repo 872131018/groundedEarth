@@ -4,10 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
-/*
-* Include email model
-*/
-use App\Inquiry;
 
 class HomeController extends Controller
 {
@@ -29,8 +25,7 @@ class HomeController extends Controller
     public function index()
     {
         return view('home', [
-            'base_url' => getenv("APP_URL"),
-            'inquiries' => Inquiry::all()
+            'base_url' => getenv("APP_URL")
         ]);
         //return view('home');
     }

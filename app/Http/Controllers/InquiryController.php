@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 /*
-* Email namespace for laravel model
+* Include inquiry model
 */
 use App\Inquiry;
 
@@ -21,6 +21,18 @@ class InquiryController extends Controller
   public function __construct(Inquiry $inquiry)
   {
     $this->inquiry = $inquiry;
+  }
+  /**
+   * Show the inquires from the homepage.
+   *
+   * @return \Illuminate\Http\Response
+   */
+  public function index()
+  {
+      return view('inquiries', [
+          'base_url' => getenv("APP_URL"),
+          'inquiries' => Inquiry::all()
+      ]);
   }
 
   public function save(Request $request)

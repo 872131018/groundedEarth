@@ -8,7 +8,12 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                  You are logged in!
+                  Inquiries:
+                  <ul>
+                  @foreach ($inquiries as $inquiry)
+                    <li>{{ $inquiry }}</li>
+                  @endforeach
+                  </ul>
                 </div>
             </div>
         </div>

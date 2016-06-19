@@ -25,8 +25,8 @@
 */ ?>
 <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>Skeleton-2.0.4/css/normalize.css">
 <link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>Skeleton-2.0.4/css/skeleton.css">
-<link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>unslider-master/dist/css/unslider.css">
-<link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>unslider-master/dist/css/unslider-dots.css">
+<link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>glidejs-master/dist/css/glide.core.css">
+<link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>glidejs-master/dist/css/glide.theme.css">
 <?php /*
 * Page CSS
 */ ?>
@@ -54,14 +54,21 @@
       </div>
       <div class="row">
         <div class="twelve columns">
-          <div id="Unslider" class="unslider">
-            <ul>
-              @foreach($images as $key => $value)
-                <li class='glide__slide'>
-                  <img src='{{ $base_url }}images/{{ $value }}'
-                </li>
-              @endforeach
-            </ul>
+          <div id="Glide" class="glide">
+            <div class="glide__arrows">
+                <button class="glide__arrow prev" data-glide-dir="<">prev</button>
+                <button class="glide__arrow next" data-glide-dir=">">next</button>
+            </div>
+            <div class="glide__wrapper">
+                <ul class="glide__track">
+                    @foreach($images as $key => $value)
+                      <li class='glide__slide'>
+                        <img src='{{ $base_url }}images/{{ $value }}'/>
+                      </li>
+                    @endforeach
+                </ul>
+            </div>
+            <div class="glide__bullets"></div>
           </div>
         </div>
       </div>
@@ -89,7 +96,7 @@
 	* Then load the internal sources second
 	*/ ?>
   <script type="text/javascript" src="<?php echo $base_url; ?>stickerjs-master/sticker.min.js"></script>
-  <script type="text/javascript" src="<?php echo $base_url; ?>unslider-master/dist/js/unslider-min.js"></script>
+  <script type="text/javascript" src="<?php echo $base_url; ?>glidejs-master/dist/glide.min.js"></script>
   <script type="text/javascript" src="<?php echo $base_url; ?>js/validateSignup.js"></script>
 	<?php /*
 	* Load the driver for execution

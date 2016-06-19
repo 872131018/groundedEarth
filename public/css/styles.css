@@ -1,4 +1,10 @@
 /*
+* Set Background color of sliders
+*/
+.glide {
+	background-color: grey;
+}
+/*
 * Logo as a sticker
 */
 .sticker {

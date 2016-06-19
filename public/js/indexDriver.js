@@ -7,9 +7,9 @@ $(document).ready()
   /*
   * Init the design slider
   */
-  $('#Unslider').unslider({
-    autoplay: true
-  });
+  $("#Glide").glide({
+        type: "carousel"
+    });
 	/*
   * Delegate all clicks to the document
   */
@@ -23,7 +23,7 @@ $(document).ready()
       /*
       * Set url for post to correct endpoint
       */
-      var url = window.location.href+"/signup";
+      var url = window.location.href+"inquiry";
       $.post(url, $("form").serialize(), function(response, status)
     	{
     		if(status == "success")
