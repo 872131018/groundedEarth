@@ -23,18 +23,38 @@ Route::get('/', function () {
 });
 */
 Route::get('/', function () {
-  $images = [
-    'bear.png',
-    'buffalo.png',
-    'cougar.png',
-    'mountains.png',
-    'skull.png',
-    'wolf.png'
-  ];
+  /*
+  * Get all the images for the designs
+  */
+  $designs = scandir('./images/designs');
+  foreach($designs as $index => $value) {
+      switch($value) {
+          case '.':
+          case '..':
+          case 'bird.png':
+            unset($designs[$index]);
+          default:
+            continue;
+      }
+  }
+  /*
+  * Get all the images for the shirts
+  */
+  $mockups = scandir('./images/mockups');
+  foreach($mockups as $index => $value) {
+      switch($value) {
+          case '.':
+          case '..':
+            unset($mockups[$index]);
+          default:
+            continue;
+      }
+  }
 
   return view('index', [
       'base_url' => getenv("APP_URL"),
-      'images' => $images
+      'designs' => $designs,
+      'mockups' => $mockups
   ]);
 });
 /*

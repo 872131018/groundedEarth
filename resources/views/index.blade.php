@@ -61,9 +61,9 @@
             </div>
             <div class="glide__wrapper">
                 <ul class="glide__track">
-                    @foreach($images as $key => $value)
+                    @foreach($mockups as $key => $value)
                       <li class='glide__slide'>
-                        <img src='{{ $base_url }}images/{{ $value }}'/>
+                        <img src='{{ $base_url }}images/mockups/{{ $value }}'/>
                       </li>
                     @endforeach
                 </ul>
@@ -86,6 +86,33 @@
           </div>
         </div>
       </diV>
+      <div class="row">
+        <div class="twelve columns">
+          <div id="Glide" class="glide">
+            <div class="glide__arrows">
+                <button class="glide__arrow prev" data-glide-dir="<">prev</button>
+                <button class="glide__arrow next" data-glide-dir=">">next</button>
+            </div>
+            <div class="glide__wrapper">
+                <ul class="glide__track">
+                    @foreach($designs as $key => $value)
+                      <li class='glide__slide'>
+                        <img src='{{ $base_url }}images/designs/{{ $value }}'/>
+                      </li>
+                    @endforeach
+                </ul>
+            </div>
+            <div class="glide__bullets"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve columns">
+          <div><h4>Have an idea?</h4></div>
+          <div><h4>We can help you create it!</h4></div>
+          <div>We are dedicated to getting you the creative design you have always wanted.</div>
+        </div>
+      </div>
     </div>
   </div>
   <?php /*

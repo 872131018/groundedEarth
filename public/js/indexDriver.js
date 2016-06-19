@@ -7,7 +7,7 @@ $(document).ready()
   /*
   * Init the design slider
   */
-  $("#Glide").glide({
+  $(".glide").glide({
         type: "carousel"
     });
 	/*
