@@ -1,9 +1,5 @@
 <?php
 /*
-* Email namespace for laravel model
-*/
-use App\Email;
-/*
 * Load the request namespace for handling post
 */
 use Illuminate\Http\Request;
@@ -62,6 +58,10 @@ Route::get('/', function () {
 */
 Route::post('/inquiry', 'InquiryController@save');
 /*
+* Save a product through post
+*/
+Route::post('/products', 'ProductController@save');
+/*
 |--------------------------------------------------------------------------
 | Application Routes
 |--------------------------------------------------------------------------
@@ -75,4 +75,5 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
     Route::get('/home', 'HomeController@index');
     Route::get('/inquiries', 'InquiryController@index');
+    Route::get('/products', 'ProductController@index');
 });
