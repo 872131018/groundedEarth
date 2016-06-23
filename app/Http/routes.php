@@ -4,6 +4,10 @@
 */
 use Illuminate\Http\Request;
 /*
+* Include product model
+*/
+use App\Product;
+/*
 |--------------------------------------------------------------------------
 | Routes File
 |--------------------------------------------------------------------------
@@ -22,6 +26,7 @@ Route::get('/', function () {
   /*
   * Get all the images for the designs
   */
+  /*
   $designs = scandir('./images/designs');
   foreach($designs as $index => $value) {
       switch($value) {
@@ -33,9 +38,11 @@ Route::get('/', function () {
             continue;
       }
   }
+  */
   /*
   * Get all the images for the shirts
   */
+  /*
   $mockups = scandir('./images/mockups');
   foreach($mockups as $index => $value) {
       switch($value) {
@@ -45,6 +52,28 @@ Route::get('/', function () {
           default:
             continue;
       }
+  }
+  */
+  /*
+  * Get all the products
+  */
+  $products = Product::all();
+  /*
+  * Create arrays for each type of slider
+  */
+  $mockups = [];
+  $designs = [];
+  foreach($products as $index=>$product) {
+    switch($product->type) {
+      case 'mockup':
+        array_push($mockups, $product);
+        break;
+      case 'design':
+        array_push($designs, $product);
+        break;
+      default:
+        break;
+    }
   }
 
   return view('index', [
