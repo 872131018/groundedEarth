@@ -22,11 +22,26 @@
 
                 <div class="panel-body">
                   Products:
-                  <ul>
-                  @foreach ($products as $product)
-                    <li>{{ $product }}</li>
-                  @endforeach
-                  </ul>
+                  <table class="table table-striped">
+                    <thead>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Link</th>
+                      <th>Image</th>
+                      <th>Price</th>
+                    </thead>
+                    <tbody>
+                      @foreach ($products as $product)
+                        <tr>
+                          <td>{{ $product->name }}</td>
+                          <td>{{ $product->type }}</td>
+                          <td>{{ $product->link }}</td>
+                          <td>{{ $product->image }}</td>
+                          <td>{{ $product->price }}</td>
+                        </tr>
+                      @endforeach
+                    </tbody>
+                  </table>
                 </div>
             </div>
         </div>
