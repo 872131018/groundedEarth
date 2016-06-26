@@ -1,5 +1,4 @@
-$(document).ready()
-{
+$(document).ready(function() {
   /*
   * Set the logo sticker
   */
@@ -37,4 +36,4 @@ $(document).ready()
     	});
 		}
 	});
-}
+});

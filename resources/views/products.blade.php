@@ -6,18 +6,48 @@
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
                 <div class="panel-heading">Dashboard</div>
-                <form action="{{ url('/products') }}" method="POST">
-                    <label for="name">Name</label>
-                    <input type="text" name="name"><br>
-                    <label for="name">Type</label>
-                    <input type="text" name="type"><br>
-                    <label for="name">Link</label>
-                    <input type="text" name="link"><br>
-                    <label for="name">Image</label>
-                    <input type="text" name="image"><br>
-                    <label for="name">Price</label>
-                    <input type="text" name="price"><br>
-                    <input type="submit" value="Add Product">
+
+                <form action="{{ url('/products') }}" method="POST" class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <label for="name" class="control-label col-sm-2">Name</label>
+                    <div class="col-sm-8">
+                     <input type="text" name="name" class="form-control">
+                   </div>
+                   <div class="col-sm-2"></div>
+                  </div>
+                  <div class="form-group">
+                    <label for="name" class="control-label col-sm-2">Type</label>
+                    <div class="col-sm-8">
+                      <input type="text" name="type" class="form-control">
+                    </div>
+                    <div class="col-sm-2"></div>
+                  </div>
+                  <div class="form-group">
+                    <label for="name" class="control-label col-sm-2">Link</label>
+                    <div class="col-sm-8">
+                      <input type="text" name="link" class="form-control">
+                    </div>
+                    <div class="col-sm-2"></div>
+                  </div>
+                  <div class="form-group">
+                    <label for="name" class="control-label col-sm-2">Image</label>
+                    <div class="col-sm-8">
+                      <input type="text" name="image" class="form-control">
+                    </div>
+                    <div class="col-sm-2"></div>
+                  </div>
+                  <div class="form-group">
+                    <label for="name" class="control-label col-sm-2">Price</label>
+                    <div class="col-sm-8">
+                      <input type="text" name="price" class="form-control">
+                    </div>
+                    <div class="col-sm-2"></div>
+                  </div>
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-10">
+                      <input type="submit" value="Add Product">
+                    </div>
                 </form>
 
                 <div class="panel-body">
@@ -29,6 +59,8 @@
                       <th>Link</th>
                       <th>Image</th>
                       <th>Price</th>
+                      <th>Edit</th>
+                      <th>Delete</th>
                     </thead>
                     <tbody>
                       @foreach ($products as $product)
@@ -38,6 +70,12 @@
                           <td>{{ $product->link }}</td>
                           <td>{{ $product->image }}</td>
                           <td>{{ $product->price }}</td>
+                          <td>
+                            <button type="button" class="btn btn-success" data-delegate="edit" data-id="{{$product->id}}">Edit</button>
+                          </td>
+                          <td>
+                            <button type="button" class="btn btn-danger" data-delegate="delete" data-id="{{$product->id}}">Delete</button>
+                          </td>
                         </tr>
                       @endforeach
                     </tbody>

@@ -87,10 +87,6 @@ Route::get('/', function () {
 */
 Route::post('/inquiry', 'InquiryController@save');
 /*
-* Save a product through post
-*/
-Route::post('/products', 'ProductController@save');
-/*
 |--------------------------------------------------------------------------
 | Application Routes
 |--------------------------------------------------------------------------
@@ -104,5 +100,16 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
     Route::get('/home', 'HomeController@index');
     Route::get('/inquiries', 'InquiryController@index');
+    /*
+    * Show the product list
+    */
     Route::get('/products', 'ProductController@index');
+    /*
+    * Save a product through post
+    */
+    Route::post('/products', 'ProductController@save');
+    /*
+    * Delete a product with spoofing
+    */
+    Route::delete('/products', 'ProductController@delete');
 });

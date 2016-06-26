@@ -23,18 +23,18 @@
 <?php /*
 * CSS
 */ ?>
-<link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>Skeleton-2.0.4/css/normalize.css">
-<link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>Skeleton-2.0.4/css/skeleton.css">
-<link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>glidejs-master/dist/css/glide.core.css">
-<link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>glidejs-master/dist/css/glide.theme.css">
+<link rel="stylesheet" type="text/css" href="{{ @getenv("APP_URL") }}Skeleton-2.0.4/css/normalize.css">
+<link rel="stylesheet" type="text/css" href="{{ @getenv("APP_URL") }}Skeleton-2.0.4/css/skeleton.css">
+<link rel="stylesheet" type="text/css" href="{{ @getenv("APP_URL") }}glidejs-master/dist/css/glide.core.css">
+<link rel="stylesheet" type="text/css" href="{{ @getenv("APP_URL") }}glidejs-master/dist/css/glide.theme.css">
 <?php /*
 * Page CSS
 */ ?>
-<link rel="stylesheet" type="text/css" href="<?php echo $base_url; ?>css/styles.css">
+<link rel="stylesheet" type="text/css" href="{{ @getenv("APP_URL") }}css/styles.css">
 <?php /*
 * Favicon
 */ ?>
-<link rel="icon" type="image/png" href="<?php echo $base_url; ?>Skeleton-2.0.4/images/favicon.png">
+<link rel="icon" type="image/png" href="{{ @getenv("APP_URL") }}Skeleton-2.0.4/images/favicon.png">
 </head>
 <?php /*
 * Primary Page Layout
@@ -122,12 +122,12 @@
 	<?php /*
 	* Then load the internal sources second
 	*/ ?>
-  <script type="text/javascript" src="<?php echo $base_url; ?>stickerjs-master/sticker.min.js"></script>
-  <script type="text/javascript" src="<?php echo $base_url; ?>glidejs-master/dist/glide.min.js"></script>
-  <script type="text/javascript" src="<?php echo $base_url; ?>js/validateSignup.js"></script>
+  <script type="text/javascript" src="{{ @getenv("APP_URL") }}stickerjs-master/sticker.min.js"></script>
+  <script type="text/javascript" src="{{ @getenv("APP_URL") }}glidejs-master/dist/glide.min.js"></script>
+  <script type="text/javascript" src="{{ @getenv("APP_URL") }}js/validateSignup.js"></script>
 	<?php /*
 	* Load the driver for execution
 	*/ ?>
-	<script type="text/javascript" src="<?php echo $base_url; ?>js/indexDriver.js"></script>
+	<script type="text/javascript" src="{{ @getenv("APP_URL") }}js/indexDriver.js"></script>
 </body>
 </html>

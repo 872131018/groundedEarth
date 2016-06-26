@@ -9,8 +9,7 @@ use Illuminate\Http\Request;
 */
 use App\Product;
 
-class ProductController extends Controller
-{
+class ProductController extends Controller {
   /*
   * Instance of email class for private use
   */
@@ -18,8 +17,7 @@ class ProductController extends Controller
   /*
   * Use depency injection to bring in class
   */
-  public function __construct(Product $product)
-  {
+  public function __construct(Product $product) {
     $this->product = $product;
   }
   /**
@@ -27,16 +25,16 @@ class ProductController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function index()
-  {
+  public function index() {
       return view('products', [
           'base_url' => getenv("APP_URL"),
           'products' => Product::all()
       ]);
   }
-
-  public function save(Request $request)
-  {
+  /*
+  * Save a product through a post request
+  */
+  public function save(Request $request) {
     /*
     * Set the models data with request data
     */
@@ -50,11 +48,26 @@ class ProductController extends Controller
     */
     if($this->product->save()) {
         return view('products', [
-            'base_url' => getenv("APP_URL"),
             'products' => Product::all()
         ]);
     } else {
         die("There was an error saving the product!");
+    }
+  }
+  /*
+  * Delete a product through a post
+  */
+  public function delete(Request $request) {
+    /*
+    * Find the product and delete it
+    */
+    $product_to_delete = Product::find($request->id);
+    if($product_to_delete->delete()) {
+      return view('products', [
+        'products' => Product::all()
+      ]);
+    } else {
+      die("There was an error saving the product!");
     }
   }
 }
