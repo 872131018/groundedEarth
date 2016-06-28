@@ -99,7 +99,14 @@ Route::post('/inquiry', 'InquiryController@save');
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
     Route::get('/home', 'HomeController@index');
+    /*
+    * List the emails signed up for the website
+    */
     Route::get('/inquiries', 'InquiryController@index');
+    /*
+    * Show the files associated with the site
+    */
+    Route::get('/files', 'FileController@index');
     /*
     * Show the product list
     */

@@ -4,34 +4,50 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
-/*
-* Include product model
-*/
-use App\Product;
 
-class ProductController extends Controller {
+class FileController extends Controller {
   /*
-  * Instance of email class for private use
+  * File requests must go through auth
   */
-  protected $product;
-  /*
-  * Use depency injection to bring in class
-  */
-  public function __construct(Product $product) {
-    $this->product = $product;
+  public function __construct() {
+    $this->middleware('auth');
   }
   /**
-   * Show the products from the homepage.
-   *
-   * @return \Illuminate\Http\Response
-   */
+  * Show the files that are manageable
+  * @return \Illuminate\Http\Response
+  */
   public function index() {
-      return view('products', [
-          'products' => Product::all()
-      ]);
+    /*
+    * Collection of lists of filenames
+    */
+    $grouped_files = new \stdClass;
+    $excluded_files = ['.', '..', '.DS_Store'];
+    $directories = scandir('images');
+    foreach($directories as $index=>$subdirectory) {
+      switch(in_array($subdirectory, $excluded_files)) {
+        case true:
+          break;
+        default:
+          $grouped_files->$subdirectory = [];
+          $files = scandir('images/'.$subdirectory);
+          foreach($files as $index=>$file) {
+            switch(in_array($file, $excluded_files)) {
+              case true:
+                break;
+              default:
+                array_push($grouped_files->$subdirectory, $file);
+            }
+          }
+          break;
+      }
+    }
+    return view('files', [
+        'files' => $grouped_files
+    ]);
   }
-  /*
+  /**
   * Save a product through a post request
+  * @return \Illuminate\Http\Response
   */
   public function save(Request $request) {
     /*
@@ -53,8 +69,9 @@ class ProductController extends Controller {
         die("There was an error saving the product!");
     }
   }
-  /*
+  /**
   * Delete a product through a post
+  * @return \Illuminate\Http\Response
   */
   public function delete(Request $request) {
     /*

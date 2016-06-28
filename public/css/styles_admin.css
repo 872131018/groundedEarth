@@ -1,0 +1,7 @@
+/*
+* Styles for the masonry grid
+*/
+.grid-item {
+  width: 200px;
+  height: 200px;
+}
