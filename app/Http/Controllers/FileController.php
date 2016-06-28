@@ -6,10 +6,15 @@ use App\Http\Requests;
 use Illuminate\Http\Request;
 
 class FileController extends Controller {
-  /*
-  * File requests must go through auth
-  */
+  /**
+   * Create a new controller instance.
+   *
+   * @return void
+   */
   public function __construct() {
+    /*
+    * Enforce logged in user actions
+    */
     $this->middleware('auth');
   }
   /**

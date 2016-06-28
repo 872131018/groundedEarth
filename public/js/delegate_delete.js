@@ -6,7 +6,7 @@ $(document).ready(function() {
     /*
     * Build a form to submit
     */
-		var $form = $("<form action="+window.location.href+" method=POST></form>");
+		var $form = $("<form action="+window.location.href+" method=POST></form>")
 		var target_id = $(event.target).data("id")
 		$form.append(
 			$("<input type=\"hidden\" name=\"id\" value=\""+target_id+"\">")

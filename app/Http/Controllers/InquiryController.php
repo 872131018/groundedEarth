@@ -18,8 +18,7 @@ class InquiryController extends Controller
   /*
   * Use depency injection to bring in class
   */
-  public function __construct(Inquiry $inquiry)
-  {
+  public function __construct(Inquiry $inquiry) {
     $this->inquiry = $inquiry;
   }
   /**

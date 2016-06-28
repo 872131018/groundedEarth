@@ -89,5 +89,7 @@
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
     <script src="{{ @getenv("APP_URL") }}js/index_admin.js"></script>
     <script src="{{ @getenv("APP_URL") }}js/delegate_delete.js"></script>
+    <script src="{{ @getenv("APP_URL") }}js/delegate_edit.js"></script>
+    <script src="{{ @getenv("APP_URL") }}js/delegate_add.js"></script>
 </body>
 </html>

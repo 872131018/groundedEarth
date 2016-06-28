@@ -18,6 +18,10 @@ class ProductController extends Controller {
   * Use depency injection to bring in class
   */
   public function __construct(Product $product) {
+    /*
+    * Enforce logged in user actions
+    */
+    $this->middleware('auth');
     $this->product = $product;
   }
   /**
@@ -34,6 +38,33 @@ class ProductController extends Controller {
   * Save a product through a post request
   */
   public function save(Request $request) {
+    /*
+    * Set the models data with request data
+    */
+    $this->product->name = $request->name;
+    $this->product->type = $request->type;
+    $this->product->link = $request->link;
+    $this->product->image = $request->image;
+    $this->product->price = $request->price;
+    /*
+    * Eloquent magic for inserting and white list values
+    */
+    if($this->product->save()) {
+        return view('products', [
+            'products' => Product::all()
+        ]);
+    } else {
+        die("There was an error saving the product!");
+    }
+  }
+  /*
+  * Edit a product through a post request
+  */
+  public function edit(Request $request) {
+    /*
+    * Retrieve the model that is to be edited
+    */
+    $this->product = Product::find($request->id);
     /*
     * Set the models data with request data
     */
