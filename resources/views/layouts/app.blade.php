@@ -91,5 +91,6 @@
     <script src="{{ @getenv("APP_URL") }}js/delegate_delete.js"></script>
     <script src="{{ @getenv("APP_URL") }}js/delegate_edit.js"></script>
     <script src="{{ @getenv("APP_URL") }}js/delegate_add.js"></script>
+    <script src="{{ @getenv("APP_URL") }}js/delegate_submit.js"></script>
 </body>
 </html>

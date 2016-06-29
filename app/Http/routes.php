@@ -78,11 +78,11 @@ Route::group(['middleware' => 'web'], function () {
     /*
     * Save a product through post
     */
-    Route::put('/products', 'ProductController@save');
+    Route::post('/products', 'ProductController@edit');
     /*
     * Save a product through post
     */
-    Route::post('/products', 'ProductController@edit');
+    Route::put('/products', 'ProductController@add');
     /*
     * Delete a product with spoofing
     */

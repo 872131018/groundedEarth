@@ -37,7 +37,7 @@ class ProductController extends Controller {
   /*
   * Save a product through a post request
   */
-  public function save(Request $request) {
+  public function add(Request $request) {
     /*
     * Set the models data with request data
     */

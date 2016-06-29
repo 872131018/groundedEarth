@@ -29,22 +29,16 @@ $(document).ready(function() {
 		$form.append(
 			$("<input type=\"hidden\" name=\"id\" value=\""+product_id+"\">")
 		);
-		$form.append(
-			$("<input type=\"hidden\" name=\"_token\" value=\""+token+"\">")
-		);
-		$form.append(
-			$("<input type=\"hidden\" name=\"_method\" value=\"POST\">")
-		);
-		/*
-		* Swap the buttn functionality
-		*/
-		$("button[data-delegate=add]").attr("data-delegate", "edit")
 		/*
 		* Change button characteristis to refect new role
 		*/
-		$("button[data-delegate=edit]").html("Edit Product")
-		$("button[data-delegate=edit]").removeClass("btn-success")
-		$("button[data-delegate=edit]").addClass("btn-primary")
+		$("button[data-delegate=add]").html("Submit Changes")
+		$("button[data-delegate=add]").removeClass("btn-success")
+		$("button[data-delegate=add]").addClass("btn-primary")
+		/*
+		* Swap the buttn functionality
+		*/
+		$("button[data-delegate=add]").attr("data-delegate", "submit")
 		/*
 		* Submit new data on next click
 		*/
