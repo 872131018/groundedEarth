@@ -5,3 +5,12 @@
   width: 200px;
   height: 200px;
 }
+.grid-item img {
+  width: 200px;
+  height: 200px;
+}
+.grid-item button {
+  position: relative;
+  bottom: 20px;
+  left: 10px;
+}
