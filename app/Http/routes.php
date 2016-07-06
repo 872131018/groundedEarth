@@ -72,6 +72,14 @@ Route::group(['middleware' => 'web'], function () {
     */
     Route::get('/files', 'FileController@index');
     /*
+    * Delete a file that has been deleted
+    */
+    Route::delete('/files', 'FileController@delete');
+    /*
+    * Save a product through post
+    */
+    Route::put('/files', 'FileController@add');
+    /*
     * Show the product list
     */
     Route::get('/products', 'ProductController@index');

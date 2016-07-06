@@ -2,7 +2,7 @@ $(document).ready(function() {
 	/*
   * Delegate all clicks to the document
   */
-  $(document).on('click', '[data-delegate=edit]', function(event) {
+  $(document).on('click', '[data-delegate=product_edit]', function(event) {
 		/*
 		* Grab data of the relevant product from siblings
 		*/
@@ -32,15 +32,12 @@ $(document).ready(function() {
 		/*
 		* Change button characteristis to refect new role
 		*/
-		$("button[data-delegate=add]").html("Submit Changes")
-		$("button[data-delegate=add]").removeClass("btn-success")
-		$("button[data-delegate=add]").addClass("btn-primary")
+		$("button[data-delegate=product_add]").html("Submit Changes")
+		$("button[data-delegate=product_add]").removeClass("btn-success")
+		$("button[data-delegate=product_add]").addClass("btn-primary")
 		/*
-		* Swap the buttn functionality
+		* Swap the button functionality
 		*/
-		$("button[data-delegate=add]").attr("data-delegate", "submit")
-		/*
-		* Submit new data on next click
-		*/
+		$("button[data-delegate=product_add]").attr("data-delegate", "product_submit")
 	});
 });

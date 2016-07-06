@@ -6,17 +6,15 @@
     <div class="col-md-10 col-md-offset-1">
       <div class="panel panel-default">
         <div class="panel-heading">Dashboard</div>
-        <form action="{{ url('/files') }}" method="POST" class="form-horizontal dropzone" role="form"></form>
+        <form action="{{ url('/files') }}" method="POST" id="dropzone" class="dropzone" role="form"></form>
         <div class="panel-body">
           Files:
           <div class="grid">
-            @foreach ($files as $index=>$directory)
-              @foreach ($directory as $image)
-                <div class="grid-item">
-                  <img src="{{ @getenv("APP_URL") }}images/{{ $index }}/{{ $image }}">
-                  <button type="button" class="btn btn-danger">-</button>
-                </div>
-              @endforeach
+            @foreach ($files as $file)
+              <div class="grid-item">
+                <img src="{{ url($file) }}">
+                <div class="circle" data-delegate="file_delete" data-name="{{ $file }}">Delete</div>
+              </div>
             @endforeach
           </div>
         </div>

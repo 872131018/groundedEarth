@@ -2,7 +2,7 @@ $(document).ready(function() {
 	/*
   * Delegate all clicks to the document
   */
-  $(document).on('click', '[data-delegate=submit]', function(event) {
+  $(document).on('click', '[data-delegate=product_add]', function(event) {
 		/*
 		* Set fields that need to be updated for form submission
 		*/
@@ -15,7 +15,7 @@ $(document).ready(function() {
 			$("<input type=\"hidden\" name=\"_token\" value=\""+token+"\">")
 		);
 		$form.append(
-			$("<input type=\"hidden\" name=\"_method\" value=\"POST\">")
+			$("<input type=\"hidden\" name=\"_method\" value=\"PUT\">")
 		);
 		/*
 		* Super the form

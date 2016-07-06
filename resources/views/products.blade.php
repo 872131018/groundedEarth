@@ -44,7 +44,7 @@
           </div>
             <div class="col-sm-2"></div>
             <div class="col-sm-10">
-              <button type="button" class="btn btn-success" data-delegate="add">Add Product</button>
+              <button type="button" class="btn btn-success" data-delegate="product_add">Add Product</button>
             </div>
         </form>
         <div class="panel-body">
@@ -68,10 +68,10 @@
                   <td data-field="image">{{ $product->image }}</td>
                   <td data-field="price">{{ $product->price }}</td>
                   <td>
-                    <button type="button" class="btn btn-primary" data-delegate="edit" data-id="{{$product->id}}">Edit</button>
+                    <button type="button" class="btn btn-primary" data-delegate="product_edit" data-id="{{$product->id}}">Edit</button>
                   </td>
                   <td>
-                    <button type="button" class="btn btn-danger" data-delegate="delete" data-id="{{$product->id}}">Delete</button>
+                    <button type="button" class="btn btn-danger" data-delegate="product_delete" data-id="{{$product->id}}">Delete</button>
                   </td>
                 </tr>
               @endforeach

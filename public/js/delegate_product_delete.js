@@ -2,7 +2,7 @@ $(document).ready(function() {
 	/*
   * Delegate all clicks to the document
   */
-  $(document).on('click', '[data-delegate=delete]', function(event) {
+  $(document).on('click', '[data-delegate=product_delete]', function(event) {
     /*
     * Build a form to submit
     */

@@ -1,6 +1,19 @@
 /*
 * Styles for the masonry grid
 */
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
+  background: #ff0000;
+  opacity: .6;
+  line-height: 50px;
+  position: relative;
+  bottom: 60px;
+}
 .grid-item {
   width: 200px;
   height: 200px;
