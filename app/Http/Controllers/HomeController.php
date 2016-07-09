@@ -13,9 +13,6 @@ class HomeController extends Controller
      * @return void
      */
     public function __construct() {
-      /*
-      * Enforce logged in user actions
-      */
       $this->middleware('auth');
     }
 

@@ -13,9 +13,6 @@ class FileController extends Controller {
    * @return void
    */
   public function __construct() {
-    /*
-    * Enforce logged in user actions
-    */
     $this->middleware('auth');
   }
   /**
@@ -39,24 +36,30 @@ class FileController extends Controller {
     ]);
   }
   /**
-  * Save a product through a post request
+  * Save a file through a post request
   * @return \Illuminate\Http\Response
   */
   public function add(Request $request) {
-    if($request->file()->move(base_path('public/images'))) {
-      echo 'success';
+    $file = $request->file('file');
+    if($file->move(public_path('images'), $file->getClientOriginalName())) {
+      return json_encode(array("result" => 'success'));;
+    } else {
+      return json_encode(array("result" => 'failure'));
     }
   }
   /**
-  * Delete a product through a post
+  * Delete a file through a post
   * @return \Illuminate\Http\Response
   */
   public function delete(Request $request) {
     /*
-    * Find the product and delete it
+    * Find the file and delete it
     */
     $file_to_delete = $request->name;
     Storage::delete($file_to_delete);
+    /*
+    * Delete doesn't return anything so ensure success with file check
+    */
     if(!Storage::exists($file_to_delete)) {
       /*
       * Collection of lists of filenames

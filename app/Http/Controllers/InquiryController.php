@@ -19,6 +19,7 @@ class InquiryController extends Controller
   * Use depency injection to bring in class
   */
   public function __construct(Inquiry $inquiry) {
+    $this->middleware('auth');
     $this->inquiry = $inquiry;
   }
   /**
@@ -26,16 +27,13 @@ class InquiryController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function index()
-  {
-      return view('inquiries', [
-          'base_url' => getenv("APP_URL"),
-          'inquiries' => Inquiry::all()
-      ]);
+  public function index() {
+    return view('inquiries', [
+        'inquiries' => Inquiry::all()
+    ]);
   }
 
-  public function save(Request $request)
-  {
+  public function save(Request $request) {
     /*
     * Set the models data with request data
     */

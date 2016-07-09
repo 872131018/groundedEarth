@@ -18,9 +18,6 @@ class ProductController extends Controller {
   * Use depency injection to bring in class
   */
   public function __construct(Product $product) {
-    /*
-    * Enforce logged in user actions
-    */
     $this->middleware('auth');
     $this->product = $product;
   }
@@ -54,7 +51,7 @@ class ProductController extends Controller {
             'products' => Product::all()
         ]);
     } else {
-        die("There was an error saving the product!");
+        die("There was an error adding the product!");
     }
   }
   /*
@@ -97,7 +94,7 @@ class ProductController extends Controller {
         'products' => Product::all()
       ]);
     } else {
-      die("There was an error saving the product!");
+      die("There was an error deleting the product!");
     }
   }
 }
