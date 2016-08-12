@@ -39,7 +39,7 @@
     </div>
     <p class="splash-subhead">We are a Colorado apparel and design company specializing in quality products at a fair price. We want to provide you with great gear as well as a positive attitude.</p>
     <p>
-        <a href="http://purecss.io" class="pure-button pure-button-primary">Welcome.</a>
+        <a href="#" class="pure-button pure-button-primary">Welcome.</a>
     </p>
   </div>
 </div>
@@ -89,13 +89,24 @@
     </div>
 
     <div class="ribbon l-box-lrg pure-g">
-        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
-            <img class="pure-img-responsive" alt="File Icons" width="300" src="img/common/file-icons.png">
+        <div id="Glide" class="glide">
+            <div class="glide__arrows">
+                <button class="glide__arrow prev" data-glide-dir="<">prev</button>
+                <button class="glide__arrow next" data-glide-dir=">">next</button>
+            </div>
+            <div class="glide__wrapper">
+                <ul class="glide__track">
+                    @foreach($mockups as $key => $value)
+                        <li class='glide__slide'>
+                            <img src='{{ $base_url }}images/mockups/{{ $value }}'/>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+            <div class="glide__bullets"></div>
         </div>
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
-
-            <h2 class="content-head content-head-ribbon">Laboris nisi ut aliquip.</h2>
-
+            <h2 class="content-head content-head-ribbon">Check out these T's!</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
