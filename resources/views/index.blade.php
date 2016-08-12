@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="A layout example that shows off a responsive product landing page.">
+<meta name="description" content="A Colorado based design firm specializing in the unusual.">
 <title>Grounded Earth</title>
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+<link rel="stylesheet" href="//yui.yahooapis.com/pure/0.6.0/pure-min.css">
 <!--[if lte IE 8]>
 <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
 <![endif]-->
 <!--[if gt IE 8]><!-->
-<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+<link rel="stylesheet" href="//yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
 <!--<![endif]-->
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 <!--[if lte IE 8]>
 <link rel="stylesheet" href="css/layouts/marketing-old-ie.css">
 <![endif]-->
 <!--[if gt IE 8]><!-->
-<link rel="stylesheet" href="pure-layout-marketing/css/layouts/marketing.css">
+<link rel="stylesheet" type="text/css" href="{{ @getenv("APP_URL") }}pure-layout-marketing/css/layouts/marketing.css">
 <link rel="stylesheet" type="text/css" href="{{ @getenv("APP_URL") }}css/styles.css">
 <!--<![endif]-->
 </head>
@@ -39,24 +39,20 @@
     </div>
     <p class="splash-subhead">We are a Colorado apparel and design company specializing in quality products at a fair price. We want to provide you with great gear as well as a positive attitude.</p>
     <p>
-        <a href="http://purecss.io" class="pure-button pure-button-primary">Welcome.</a>
+      <a href="http://purecss.io" class="pure-button pure-button-primary">Welcome.</a>
     </p>
   </div>
 </div>
 <div class="content-wrapper">
     <div class="content">
         <h2 class="content-head is-center">Excepteur sint occaecat cupidatat.</h2>
-
         <div class="pure-g">
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-
                 <h3 class="content-subhead">
                     <i class="fa fa-rocket"></i>
                     Get Started Quickly
                 </h3>
-                <p>
-                    Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
-                </p>
+                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
             </div>
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
                 <h3 class="content-subhead">

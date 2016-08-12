@@ -67,6 +67,7 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
+                          <li><a href="{{ url('/content') }}"><i class="fa fa-btn"></i>Content</a></li>
                           <li><a href="{{ url('/files') }}"><i class="fa fa-btn"></i>Files</a></li>
                           <li><a href="{{ url('/products') }}"><i class="fa fa-btn"></i>Products</a></li>
                           <li><a href="{{ url('/inquiries') }}"><i class="fa fa-btn"></i>Inquiries</a></li>

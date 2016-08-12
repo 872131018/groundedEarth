@@ -95,4 +95,20 @@ Route::group(['middleware' => 'web'], function () {
     * Delete a product with spoofing
     */
     Route::delete('/products', 'ProductController@delete');
+    /*
+    * Show the product list
+    */
+    Route::get('/content', 'ContentController@index');
+    /*
+    * Save a product through post
+    */
+    Route::post('/content', 'ContentController@edit');
+    /*
+    * Save a product through post
+    */
+    Route::put('/content', 'ContentController@add');
+    /*
+    * Delete a product with spoofing
+    */
+    Route::delete('/content', 'ContentController@delete');
 });
