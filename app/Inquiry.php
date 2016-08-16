@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Inquiry extends Model
 {
-    //
     use SoftDeletes;
 
     /**

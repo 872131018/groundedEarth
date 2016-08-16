@@ -89,11 +89,14 @@
     <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
     <script src="{{ @getenv("APP_URL") }}js/index_admin.js"></script>
-    <script src="{{ @getenv("APP_URL") }}js/delegate_product_delete.js"></script>
-    <script src="{{ @getenv("APP_URL") }}js/delegate_product_edit.js"></script>
     <script src="{{ @getenv("APP_URL") }}js/delegate_product_add.js"></script>
+    <script src="{{ @getenv("APP_URL") }}js/delegate_product_edit.js"></script>
     <script src="{{ @getenv("APP_URL") }}js/delegate_product_submit.js"></script>
-
+    <script src="{{ @getenv("APP_URL") }}js/delegate_product_delete.js"></script>
     <script src="{{ @getenv("APP_URL") }}js/delegate_file_delete.js"></script>
+    <script src="{{ @getenv("APP_URL") }}js/delegate_content_add.js"></script>
+    <script src="{{ @getenv("APP_URL") }}js/delegate_content_edit.js"></script>
+    <script src="{{ @getenv("APP_URL") }}js/delegate_content_submit.js"></script>
+    <script src="{{ @getenv("APP_URL") }}js/delegate_content_delete.js"></script>
 </body>
 </html>

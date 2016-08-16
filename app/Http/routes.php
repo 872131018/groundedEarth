@@ -68,47 +68,23 @@ Route::group(['middleware' => 'web'], function () {
     */
     Route::get('/inquiries', 'InquiryController@index');
     /*
-    * Show the files associated with the site
+    * File Routes
     */
     Route::get('/files', 'FileController@index');
-    /*
-    * Delete a file that has been deleted
-    */
     Route::delete('/files', 'FileController@delete');
-    /*
-    * Save a product through post
-    */
     Route::put('/files', 'FileController@add');
     /*
     * Show the product list
     */
     Route::get('/products', 'ProductController@index');
-    /*
-    * Save a product through post
-    */
     Route::post('/products', 'ProductController@edit');
-    /*
-    * Save a product through post
-    */
     Route::put('/products', 'ProductController@add');
-    /*
-    * Delete a product with spoofing
-    */
     Route::delete('/products', 'ProductController@delete');
     /*
-    * Show the product list
+    * Show the content block list
     */
     Route::get('/content', 'ContentController@index');
-    /*
-    * Save a product through post
-    */
     Route::post('/content', 'ContentController@edit');
-    /*
-    * Save a product through post
-    */
     Route::put('/content', 'ContentController@add');
-    /*
-    * Delete a product with spoofing
-    */
     Route::delete('/content', 'ContentController@delete');
 });

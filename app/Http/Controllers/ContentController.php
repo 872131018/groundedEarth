@@ -26,59 +26,56 @@ class ContentController extends Controller {
    *
    * @return \Illuminate\Http\Response
    */
-  public function index() {
-      return view('content', [
-          'content' => Content::all()
-      ]);
-  }
+    public function index() {
+        /*
+        * Load the content list
+        */
+        return view('content', [
+          'contents' => Content::all()
+        ]);
+    }
   /*
-  * Save a product through a post request
+  * Save a content block through a post request
   */
   public function add(Request $request) {
     /*
     * Set the models data with request data
     */
-    $this->product->name = $request->name;
-    $this->product->type = $request->type;
-    $this->product->link = $request->link;
-    $this->product->image = $request->image;
-    $this->product->price = $request->price;
+    $this->content->name = $request->name;
+    $this->content->copy = $request->copy;
     /*
     * Eloquent magic for inserting and white list values
     */
-    if($this->product->save()) {
-        return view('products', [
-            'products' => Product::all()
+    if($this->content->save()) {
+        return view('content', [
+            'contents' => Content::all()
         ]);
     } else {
-        die("There was an error adding the product!");
+        die("There was an error adding the copy!");
     }
   }
   /*
-  * Edit a product through a post request
+  * Edit a content block through a post request
   */
   public function edit(Request $request) {
     /*
     * Retrieve the model that is to be edited
     */
-    $this->product = Product::find($request->id);
+    $this->content = Content::find($request->id);
     /*
     * Set the models data with request data
     */
-    $this->product->name = $request->name;
-    $this->product->type = $request->type;
-    $this->product->link = $request->link;
-    $this->product->image = $request->image;
-    $this->product->price = $request->price;
+    $this->content->name = $request->name;
+    $this->content->copy = $request->copy;
     /*
     * Eloquent magic for inserting and white list values
     */
-    if($this->product->save()) {
-        return view('products', [
-            'products' => Product::all()
+    if($this->content->save()) {
+        return view('content', [
+            'contents' => Content::all()
         ]);
     } else {
-        die("There was an error saving the product!");
+        die("There was an error saving the copy!");
     }
   }
   /*
@@ -88,13 +85,13 @@ class ContentController extends Controller {
     /*
     * Find the product and delete it
     */
-    $product_to_delete = Product::find($request->id);
-    if($product_to_delete->delete()) {
-      return view('products', [
-        'products' => Product::all()
+    $content_to_delete = Content::find($request->id);
+    if($content_to_delete->delete()) {
+      return view('content', [
+        'contents' => Content::all()
       ]);
     } else {
-      die("There was an error deleting the product!");
+      die("There was an error deleting the copy!");
     }
   }
 }
