@@ -18,6 +18,7 @@
 <![endif]-->
 <!--[if gt IE 8]><!-->
 <link rel="stylesheet" type="text/css" href="{{ @getenv("APP_URL") }}pure-layout-marketing/css/layouts/marketing.css">
+<link rel="stylesheet" type="text/css" href="{{ @getenv("APP_URL") }}glidejs-master/dist/css/glide.core.min.css">
 <link rel="stylesheet" type="text/css" href="{{ @getenv("APP_URL") }}css/styles.css">
 <!--<![endif]-->
 </head>
@@ -92,9 +93,9 @@
             </div>
             <div class="glide__wrapper">
                 <ul class="glide__track">
-                    @foreach($mockups as $key => $value)
+                    @foreach($products as $product)
                         <li class='glide__slide'>
-                            <img src='{{ $base_url }}images/mockups/{{ $value }}'/>
+                            <img src='{{ @getenv("APP_URL") }}images/{{ $product->image }}'/>
                         </li>
                     @endforeach
                 </ul>
@@ -166,6 +167,6 @@
 <?php /*
 * Load the driver for execution
 */ ?>
-<script type="text/javascript" src="{{ @getenv("APP_URL") }}js/indexDriver.js"></script>
+<script type="text/javascript" src="{{ @getenv("APP_URL") }}js/index_driver.js"></script>
 </body>
 </html>

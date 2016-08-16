@@ -42,6 +42,7 @@ class ProductController extends Controller {
     $this->product->type = $request->type;
     $this->product->link = $request->link;
     $this->product->image = $request->image;
+    $this->product->thumbnail = $request->thumbnail;
     $this->product->price = $request->price;
     /*
     * Eloquent magic for inserting and white list values
@@ -69,6 +70,7 @@ class ProductController extends Controller {
     $this->product->type = $request->type;
     $this->product->link = $request->link;
     $this->product->image = $request->image;
+    $this->product->thumbnail = $request->thumbnail;
     $this->product->price = $request->price;
     /*
     * Eloquent magic for inserting and white list values

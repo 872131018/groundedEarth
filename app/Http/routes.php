@@ -21,29 +21,10 @@ Route::get('/', function () {
   /*
   * Get all the products to work with
   */
-  $products = Product::all();
-  /*
-  * Create arrays for each type of slider
-  */
-  $mockups = [];
-  $designs = [];
-  foreach($products as $index=>$product) {
-    switch($product->type) {
-      case 'mockup':
-        array_push($mockups, $product);
-        break;
-      case 'design':
-        array_push($designs, $product);
-        break;
-      default:
-        break;
-    }
-  }
+  $products = Product::where('type', 'Shirt')->take(3)->get();
 
   return view('index', [
-      'base_url' => getenv("APP_URL"),
-      'designs' => $designs,
-      'mockups' => $mockups
+      'products' => $products
   ]);
 });
 /*

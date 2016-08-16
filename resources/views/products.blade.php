@@ -36,6 +36,13 @@
             <div class="col-sm-2"></div>
           </div>
           <div class="form-group">
+            <label for="name" class="control-label col-sm-2">Thumbnail</label>
+            <div class="col-sm-8">
+              <input type="text" name="thumbnail" class="form-control">
+            </div>
+            <div class="col-sm-2"></div>
+          </div>
+          <div class="form-group">
             <label for="name" class="control-label col-sm-2">Price</label>
             <div class="col-sm-8">
               <input type="text" name="price" class="form-control">
@@ -55,6 +62,7 @@
               <th>Type</th>
               <th>Link</th>
               <th>Image</th>
+              <th>Thumbnail</th>
               <th>Price</th>
               <th>Edit</th>
               <th>Delete</th>
@@ -66,6 +74,7 @@
                   <td data-field="type">{{ $product->type }}</td>
                   <td data-field="link">{{ $product->link }}</td>
                   <td data-field="image">{{ $product->image }}</td>
+                  <td data-field="image">{{ $product->thumbnail }}</td>
                   <td data-field="price">{{ $product->price }}</td>
                   <td>
                     <button type="button" class="btn btn-primary" data-delegate="product_edit" data-id="{{$product->id}}">Edit</button>

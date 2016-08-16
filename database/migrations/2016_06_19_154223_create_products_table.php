@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
           $table->string('type');
           $table->string('link');
           $table->string('image');
+          $table->string('thumbnail');
           $table->string('price');
           $table->timestamps();
           $table->softDeletes();
