@@ -18,6 +18,7 @@ class CreateInquiriesTable extends Migration
              $table->string('name');
              $table->string('city');
              $table->string('state');
+             $table->text('comment');
              $table->timestamps();
              $table->softDeletes();
          });

@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 */
 use App\Product;
 /*
+* Inlcude the inquiry model
+*/
+use App\Inquiry;
+/*
 |--------------------------------------------------------------------------
 | Routes File
 |--------------------------------------------------------------------------
@@ -30,7 +34,29 @@ Route::get('/', function () {
 /*
 * Save the email through post
 */
-Route::post('/inquiry', 'InquiryController@save');
+Route::post('/inquiry', function(Request $request, Inquiry $inquiry) {
+    /*
+    * Set the models data with request data
+    */
+    $inquiry->email = $request->email;
+    $inquiry->name = $request->name;
+    $inquiry->city = $request->city;
+    $inquiry->state = $request->state;
+    $inquiry->comment = $request->comment;
+    /*
+    * Eloquent magic for inserting and white list values
+    */
+    if($inquiry->save()) {
+      $result = "true";
+    }
+    else {
+      $result = "false";
+    }
+    /*
+    * send json response back
+    */
+    return json_encode(array("result" => $result));
+});
 /*
 |--------------------------------------------------------------------------
 | Application Routes

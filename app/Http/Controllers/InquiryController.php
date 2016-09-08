@@ -32,27 +32,4 @@ class InquiryController extends Controller
         'inquiries' => Inquiry::all()
     ]);
   }
-
-  public function save(Request $request) {
-    /*
-    * Set the models data with request data
-    */
-    $this->inquiry->email = $request->email;
-    $this->inquiry->name = $request->name;
-    $this->inquiry->city = $request->city;
-    $this->inquiry->state = $request->state;
-    /*
-    * Eloquent magic for inserting and white list values
-    */
-    if($this->inquiry->save()) {
-      $result = "true";
-    }
-    else {
-      $result = "false";
-    }
-    /*
-    * send json response back
-    */
-    return json_encode(array("result" => $result));
-  }
 }
