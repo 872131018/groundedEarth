@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="//www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-<link rel="stylesheet" href="{{ @getenv("APP_URL") }}css/w3_styles.css">
+<link rel="stylesheet" href="{{ @getenv("APP_URL") }}stylesheets/w3_styles.css">
 
 <body>
 <!-- Navbar -->
@@ -203,9 +203,9 @@
 <script src="//maps.googleapis.com/maps/api/js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <!-- local scripts -->
-<script type="text/javascript" src="{{ @getenv("APP_URL") }}js/w3_googlemaps.js"></script>
-<script type="text/javascript" src="{{ @getenv("APP_URL") }}js/w3_javascripts.js"></script>
-<script type="text/javascript" src="{{ @getenv("APP_URL") }}js/index_driver.js"></script>
+<script type="text/javascript" src="{{ @getenv("APP_URL") }}javascripts/w3_googlemaps.js"></script>
+<script type="text/javascript" src="{{ @getenv("APP_URL") }}javascripts/w3_javascripts.js"></script>
+<script type="text/javascript" src="{{ @getenv("APP_URL") }}javascripts/index_driver.js"></script>
 
 </body>
 </html>
