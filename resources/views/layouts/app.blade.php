@@ -7,7 +7,7 @@
     <!-- Meta for csrf token protection -->
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-    <title>Laravel</title>
+    <title>Grounded Earth</title>
 
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
@@ -44,7 +44,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
+                    Grounded Earth
                 </a>
             </div>
 

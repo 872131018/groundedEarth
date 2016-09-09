@@ -24,7 +24,6 @@ class HomeController extends Controller
     public function index()
     {
         return view('home', [
-            'base_url' => getenv("APP_URL")
         ]);
         //return view('home');
     }

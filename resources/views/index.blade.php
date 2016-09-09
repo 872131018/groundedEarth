@@ -189,14 +189,6 @@
 <!-- Add Google Map -->
 <div id="googleMap" style="height:400px;filter:grayscale(90%);-webkit-filter:grayscale(90%);"></div>
 
-<!-- external scripts -->
-<script src="//maps.googleapis.com/maps/api/js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<!-- local scripts -->
-<script type="text/javascript" src="{{ @getenv("APP_URL") }}js/w3_googlemaps.js"></script>
-<script type="text/javascript" src="{{ @getenv("APP_URL") }}js/w3_javascripts.js"></script>
-<script type="text/javascript" src="{{ @getenv("APP_URL") }}js/index_driver.js"></script>
-
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
   <a href="#" class="w3-hover-text-indigo"><i class="fa fa-facebook-official"></i></a>
@@ -206,6 +198,14 @@
   <a href="#" class="w3-hover-text-indigo"><i class="fa fa-linkedin"></i></a>
   <p class="w3-medium">Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
+
+<!-- external scripts -->
+<script src="//maps.googleapis.com/maps/api/js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<!-- local scripts -->
+<script type="text/javascript" src="{{ @getenv("APP_URL") }}js/w3_googlemaps.js"></script>
+<script type="text/javascript" src="{{ @getenv("APP_URL") }}js/w3_javascripts.js"></script>
+<script type="text/javascript" src="{{ @getenv("APP_URL") }}js/index_driver.js"></script>
 
 </body>
 </html>
