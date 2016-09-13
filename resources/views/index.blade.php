@@ -179,6 +179,7 @@
             </div>
           </div>
           <input class="w3-input w3-border" type="text" name="comment" placeholder="Comment">
+          {{ csrf_field() }}
           <button class="w3-btn w3-section w3-right" type="button" data-delegate="signup">SEND</button>
         </form>
       </div>
@@ -205,7 +206,7 @@
 <!-- local scripts -->
 <script type="text/javascript" src="{{ @getenv("APP_URL") }}javascripts/w3_googlemaps.js"></script>
 <script type="text/javascript" src="{{ @getenv("APP_URL") }}javascripts/w3_javascripts.js"></script>
-<script type="text/javascript" src="{{ @getenv("APP_URL") }}javascripts/index_driver.js"></script>
+<script type="text/javascript" src="{{ @getenv("APP_URL") }}javascripts/index.js"></script>
 
 </body>
 </html>
