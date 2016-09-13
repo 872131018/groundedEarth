@@ -1,15 +1,9 @@
 <?php
 /*
-* Load the request namespace for handling post
+* Include models that are used
 */
 use Illuminate\Http\Request;
-/*
-* Include product model
-*/
 use App\Product;
-/*
-* Inlcude the inquiry model
-*/
 use App\Inquiry;
 /*
 |--------------------------------------------------------------------------
