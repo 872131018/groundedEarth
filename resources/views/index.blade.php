@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <link rel="stylesheet" href="{{ @getenv("APP_URL") }}stylesheets/w3_styles.css">
+<link rel="stylesheet" href="{{ @getenv("APP_URL") }}stylesheets/styles.css">
 
 <body>
 <!-- Navbar -->
@@ -66,22 +67,16 @@
     </div>
   </div>
   <!-- The Band Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
-    <h2 class="w3-wide">Grounded Earth</h2>
-    <p class="w3-opacity"><i>Welcome</i></p>
-    <p class="w3-justify">We are a Colorado apparel and design company specializing in quality products at a fair price. We want to provide you with great gear as well as a positive attitude. Keep rocking and never stop sporting a unique lifestyle.</p>
+  <div class="w3-container w3-content w3-center w3-padding-32" style="max-width:800px">
     <div class="w3-row w3-padding-32">
-      <div class="w3-third">
-        <p>Name</p>
-        <img src="img_bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      <div class="w3-half">
+        <div class="sticker logo-sticker"></div>
+        <!--<img src="{{ @getenv('APP_URL') }}images/grounded.jpg" class="w3-round w3-margin-bottom" alt="Grounded Earth Logo" style="width:100%">-->
       </div>
-      <div class="w3-third">
-        <p>Name</p>
-        <img src="img_bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
-      </div>
-      <div class="w3-third">
-        <p>Name</p>
-        <img src="img_bandmember.jpg" class="w3-round" alt="Random Name" style="width:60%">
+      <div class="w3-half">
+        <h2 class="w3-wide">Grounded Earth</h2>
+        <p class="w3-opacity"><i>Welcome</i></p>
+        <p class="w3-justify">We are a Colorado apparel and design company specializing in quality products at a fair price. We want to provide you with great gear as well as a positive attitude. Keep rocking and never stop sporting a unique lifestyle.</p>
       </div>
     </div>
   </div>
@@ -204,6 +199,7 @@
 <script src="//maps.googleapis.com/maps/api/js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <!-- local scripts -->
+<script type="text/javascript" src="{{ @getenv("APP_URL") }}stickerjs-master/sticker.min.js"></script>
 <script type="text/javascript" src="{{ @getenv("APP_URL") }}javascripts/w3_googlemaps.js"></script>
 <script type="text/javascript" src="{{ @getenv("APP_URL") }}javascripts/w3_javascripts.js"></script>
 <script type="text/javascript" src="{{ @getenv("APP_URL") }}javascripts/index.js"></script>

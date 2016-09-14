@@ -1,57 +1,10 @@
 /*
-* Set Background color of sliders
-*/
-.glide {
-	background-color: grey;
-}
-/*
 * Logo as a sticker
 */
-.sticker {
-		position: relative;
-		width: 300px;
-		height: 300px;
-		margin: auto;
-}
-
 .logo-sticker .sticker-img {
-		background-image: url(../images/logo.png);
+		background-image: url(../images/grounded.jpg);
 }
-/*
-* Section settings
-*/
-.typeA {
-	background: rgba(179,220,237,1);
-	background: -moz-linear-gradient(left, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 0%, rgba(188,224,238,1) 100%);
-	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(179,220,237,1)), color-stop(0%, rgba(41,184,229,1)), color-stop(100%, rgba(188,224,238,1)));
-	background: -webkit-linear-gradient(left, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 0%, rgba(188,224,238,1) 100%);
-	background: -o-linear-gradient(left, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 0%, rgba(188,224,238,1) 100%);
-	background: -ms-linear-gradient(left, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 0%, rgba(188,224,238,1) 100%);
-	background: linear-gradient(to right, rgba(179,220,237,1) 0%, rgba(41,184,229,1) 0%, rgba(188,224,238,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=1 );
-}
-/*
-* Color Selector Settings
-*/
-.circle {
-	border-radius: 50%;
-	width: 60px;
-	height: 60px;
-}
-#circle1 {
-  background: red;
-}
-#circle2 {
-  background: green;
-}
-#circle3 {
-  background: blue;
-}
-/*
-* Set position of the svg
-*/
-#svgWrapper {
-	position: absolute;
-	top: -150px;
-	left: -200px;
+.sticker {
+    width: 300px;
+    height: 300px;
 }
