@@ -77,13 +77,13 @@
   <div class="w3-container w3-content w3-center w3-padding-32" style="max-width:800px">
     <div class="w3-row w3-padding-32">
       <div class="w3-half">
-        <div class="sticker logo-sticker"></div>
-        <!--<img src="{{ @getenv('APP_URL') }}images/grounded.jpg" class="w3-round w3-margin-bottom" alt="Grounded Earth Logo" style="width:100%">-->
-      </div>
-      <div class="w3-half">
         <h2 class="w3-wide">Grounded Earth</h2>
         <p class="w3-opacity"><i>Welcome</i></p>
         <p class="w3-justify">We are a Colorado apparel and design company specializing in quality products at a fair price. We want to provide you with great gear as well as a positive attitude. Keep rocking and never stop sporting a unique lifestyle.</p>
+      </div>
+      <div class="w3-half">
+        <div class="sticker logo-sticker"></div>
+        <!--<img src="{{ @getenv('APP_URL') }}images/grounded.jpg" class="w3-round w3-margin-bottom" alt="Grounded Earth Logo" style="width:100%">-->
       </div>
     </div>
   </div>
