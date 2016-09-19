@@ -53,14 +53,21 @@
     </div>
   </div>
   <div class="mySlides w3-display-container">
-    <img src="{{ @getenv('APP_URL') }}images/denvernight.jpg" style="width:100%">
+    <img src="{{ @getenv('APP_URL') }}images/mountainLake.jpg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
       <h3>Downtown Denver</h3>
       <p><b>By night this city really comes to life.</b></p>
     </div>
   </div>
   <div class="mySlides w3-display-container">
-    <img src="{{ @getenv('APP_URL') }}images/rockymountains.jpg" style="width:100%">
+    <img src="{{ @getenv('APP_URL') }}images/redrocks.jpg" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Rocky Mountains</h3>
+      <p><b>In colorado, the mountains provide inspiration and relief.</b></p>
+    </div>
+  </div>
+  <div class="mySlides w3-display-container">
+    <img src="{{ @getenv('APP_URL') }}images/mountainFlower.jpg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
       <h3>Rocky Mountains</h3>
       <p><b>In colorado, the mountains provide inspiration and relief.</b></p>
@@ -93,33 +100,17 @@
       </ul>
       -->
       <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
-        <div class="w3-third w3-margin-bottom">
-          <img src="{{ @getenv('APP_URL') }}images/skully.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>Skull Shirt</b></p>
-            <p class="w3-opacity">29.99</p>
-            <p>A sweet skull with native american influence on a cotton T</p>
-            <button class="w3-btn w3-margin-bottom">Buy Now!</button>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="{{ @getenv('APP_URL') }}images/logo.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>Logo Hoodie</b></p>
-            <p class="w3-opacity">39.99</p>
-            <p>A high quality hoodie rockin the Grounded Earth Logo</p>
-            <button class="w3-btn w3-margin-bottom">Buy Now!</button>
-          </div>
-        </div>
-        <div class="w3-third w3-margin-bottom">
-          <img src="{{ @getenv('APP_URL') }}images/owl.png" alt="Norway" style="width:100%" class="w3-hover-opacity">
-          <div class="w3-container w3-white">
-            <p><b>Owl Shirt</b></p>
-            <p class="w3-opacity">29.99</p>
-            <p>An owl with a lot of color and flare on a cotton T</p>
-            <button class="w3-btn w3-margin-bottom">Buy Now!</button>
-          </div>
-        </div>
+        @foreach($products as $product)
+            <div class="w3-third w3-margin-bottom">
+              <img src="{{ @getenv('APP_URL') }}images/{{ $product->image }}" alt="{{ $product->name }}" style="width:100%" class="w3-hover-opacity">
+              <div class="w3-container w3-white">
+                <p><b>{{ $product->name }}</b></p>
+                <p>{{ $product->description }}</p>
+                <p class="w3-opacity">{{ $product->price }}</p>
+                <button class="w3-btn w3-margin-bottom">Buy Now!</button>
+              </div>
+            </div>
+        @endforeach
       </div>
     </div>
   </div>

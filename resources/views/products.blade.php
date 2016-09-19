@@ -15,6 +15,13 @@
             <div class="col-sm-2"></div>
           </div>
           <div class="form-group">
+            <label for="name" class="control-label col-sm-2">Description</label>
+            <div class="col-sm-8">
+             <input type="text" name="description" class="form-control">
+            </div>
+            <div class="col-sm-2"></div>
+          </div>
+          <div class="form-group">
             <label for="name" class="control-label col-sm-2">Type</label>
             <div class="col-sm-8">
               <input type="text" name="type" class="form-control">
@@ -59,6 +66,7 @@
           <table class="table table-striped">
             <thead>
               <th>Name</th>
+              <th>Description</th>
               <th>Type</th>
               <th>Link</th>
               <th>Image</th>
@@ -71,6 +79,7 @@
               @foreach ($products as $product)
                 <tr>
                   <td data-field="name">{{ $product->name }}</td>
+                  <td data-field="name">{{ $product->description }}</td>
                   <td data-field="type">{{ $product->type }}</td>
                   <td data-field="link">{{ $product->link }}</td>
                   <td data-field="image">{{ $product->image }}</td>

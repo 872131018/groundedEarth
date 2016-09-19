@@ -39,6 +39,7 @@ class ProductController extends Controller {
     * Set the models data with request data
     */
     $this->product->name = $request->name;
+    $this->product->description = $request->description;
     $this->product->type = $request->type;
     $this->product->link = $request->link;
     $this->product->image = $request->image;
@@ -67,6 +68,7 @@ class ProductController extends Controller {
     * Set the models data with request data
     */
     $this->product->name = $request->name;
+    $this->product->description = $request->description;
     $this->product->type = $request->type;
     $this->product->link = $request->link;
     $this->product->image = $request->image;

@@ -3,9 +3,13 @@ $(document).ready(function() {
   * Delegate all clicks to the document
   */
   $(document).on('click', '[data-delegate=product_delete]', function(event) {
-    /*
-    * Build a form to submit
-    */
+        /*
+        * Set fields that need to be updated for form submission
+        */
+        var token = $("meta[name=csrf-token]").attr("content")
+        /*
+        * Build a form to submit
+        */
 		var $form = $("<form action="+window.location.href+" method=POST></form>")
 		var target_id = $(event.target).data("id")
 		$form.append(
@@ -14,7 +18,6 @@ $(document).ready(function() {
 		$form.append(
 			$("<input name=\"_method\" value=\"DELETE\">")
 		);
-		var token = $("meta[name=\"csrf-token\"]").attr("content")
 		$form.append(
 			$("<input name=\"_token\" value=\""+token+"\">")
 		);
