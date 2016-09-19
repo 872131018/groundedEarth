@@ -2,7 +2,7 @@ $(document).ready(function() {
     /*
     * Set the logo sticker
     */
-    //Sticker.init('.logo-sticker')
+    Sticker.init('.logo-sticker')
     /*
     * Delegate all clicks to the document
     */
