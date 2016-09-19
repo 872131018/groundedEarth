@@ -53,7 +53,7 @@
     </div>
   </div>
   <div class="mySlides w3-display-container">
-    <img src="{{ @getenv('APP_URL') }}images/mountainLake.jpg" style="width:100%">
+    <img src="{{ @getenv('APP_URL') }}images/mountainlake.jpg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
       <h3>Downtown Denver</h3>
       <p><b>By night this city really comes to life.</b></p>
@@ -67,7 +67,7 @@
     </div>
   </div>
   <div class="mySlides w3-display-container">
-    <img src="{{ @getenv('APP_URL') }}images/mountainFlower.jpg" style="width:100%">
+    <img src="{{ @getenv('APP_URL') }}images/mountainflower.jpg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
       <h3>Rocky Mountains</h3>
       <p><b>In colorado, the mountains provide inspiration and relief.</b></p>
