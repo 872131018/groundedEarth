@@ -15,6 +15,8 @@ $(document).ready(function() {
 		$('input[name=link]').val(link)
 		var image = $row.siblings('[data-field=image]').html()
 		$('input[name=image]').val(image)
+        var thumbnail = $row.siblings('[data-field=thumbnail]').html()
+		$('input[name=thumbnail]').val(thumbnail)
 		var price = $row.siblings('[data-field=price]').html()
 		$('input[name=price]').val(price)
 		/*

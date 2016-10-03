@@ -20,12 +20,7 @@ Route::get('/', function () {
   * Get all the products to work with
   */
   $products = Product::where('type', 'Shirt')->take(3)->get();
-  /*
-  echo '<pre>';
-  print_r($products);
-  echo '</pre>';
-  die;
-  */
+  
   return view('index', [
       'products' => $products
   ]);
