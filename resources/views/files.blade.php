@@ -12,7 +12,10 @@
           <div class="grid">
             @foreach ($files as $file)
               <div class="grid-item">
-                <img src="{{ url($file) }}">
+                <img src="{{ url('images/'.$file) }}">
+                <span class="caption fade-caption">
+                    <h3>{{ $file }}</h3>
+                </span>
                 <div class="circle" data-delegate="file_delete" data-name="{{ $file }}">Delete</div>
               </div>
             @endforeach
