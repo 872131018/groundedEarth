@@ -23,11 +23,12 @@ class FileController extends Controller {
     /*
     * Recursively get image files from storage
     */
-    $excluded_files = ['images/.DS_Store'];
-    $files = Storage::allFiles('images');
+    $excluded_files = ['.DS_Store'];
+    $files = Storage::allFiles();
     foreach($files as $index=>$file) {
       if(in_array($file, $excluded_files)) {
           unset($files[$index]);
+          continue;
       }
     }
 
@@ -64,11 +65,12 @@ class FileController extends Controller {
       /*
       * Collection of lists of filenames
       */
-      $excluded_files = ['images/.DS_Store'];
-      $files = Storage::allFiles('images');
+      $excluded_files = ['.DS_Store'];
+      $files = Storage::allFiles();
       foreach($files as $index=>$file) {
         if(in_array($file, $excluded_files)) {
             unset($files[$index]);
+            continue;
         }
       }
 
