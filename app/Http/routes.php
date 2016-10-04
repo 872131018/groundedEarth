@@ -20,9 +20,35 @@ Route::get('/', function () {
   * Get all the products to work with
   */
   $products = Product::where('type', 'Shirt')->take(3)->get();
-  
+  /*
+  * Create an object to hold the slider data
+  */
+  $slider = [
+      (object) [
+          'image' => 'images/denverskyline.jpg',
+          'header' => 'Downtown Denver',
+          'caption' => 'What a legit place to do business!'
+      ],
+      (object) [
+          'image' => 'images/redrocks.jpg',
+          'header' => 'Rocky Mountains',
+          'caption' => 'In colorado, the mountains provide inspiration and relief.'
+      ],
+      (object) [
+          'image' => 'images/mountainflower.jpg',
+          'header' => 'Natural Escape',
+          'caption' => 'Fresh air and tranquil scenery, these are the Rockies.'
+      ],
+      (object) [
+          'image' => 'images/mountainlake.jpg',
+          'header' => 'Lakes Reflections',
+          'caption' => 'In colorado, the mountains provide inspiration and relief.'
+      ],
+  ];
+
   return view('index', [
-      'products' => $products
+      'products' => $products,
+      'slider' => $slider
   ]);
 });
 /*
