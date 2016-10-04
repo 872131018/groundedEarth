@@ -1,4 +1,13 @@
 /*
+* Default styles for html
+*/
+body {
+    font-family: "Lato", sans-serif;
+}
+ul {
+    list-style: none;
+}
+/*
 * Logo as a sticker
 */
 .logo-sticker .sticker-img {
