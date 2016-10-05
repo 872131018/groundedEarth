@@ -53,3 +53,13 @@
   bottom: 20px;
   left: 10px;
 }
+/*
+* Styles from inline layout
+*/
+body {
+    font-family: 'Lato';
+}
+
+.fa-btn {
+    margin-right: 6px;
+}
