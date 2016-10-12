@@ -18,16 +18,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/dropzone.css" rel="stylesheet">
     <link href="{{ @getenv("APP_URL") }}stylesheets/styles_admin.css" rel="stylesheet">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
-
-    <style>
-        body {
-            font-family: 'Lato';
-        }
-
-        .fa-btn {
-            margin-right: 6px;
-        }
-    </style>
 </head>
 <body id="app-layout">
     <nav class="navbar navbar-default">

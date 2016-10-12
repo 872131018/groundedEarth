@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="//www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-<link rel="stylesheet" href="{{ url('stylesheets/w3_styles.css') }}">
+<link rel="stylesheet" href="{{ url('stylesheets/background_slider.css') }}">
 <link rel="stylesheet" href="{{ url('stylesheets/styles.css') }}">
 
 <body>
@@ -45,15 +45,19 @@
 <!-- Page content -->
 <div class="w3-content" style="max-width:1800px;">
     <!-- Automatic Slideshow Images -->
-    @foreach($slider as $slide)
-        <div class="mySlides w3-display-container">
-            <img src="{{ url($slide->image) }}" style="width:100%">
-            <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-                <h3>{{ $slide->header }}</h3>
-                <p><b>{{ $slide->caption }}</b></p>
-            </div>
-        </div>
-    @endforeach
+    <div class="w3-display-container" style="height: 720px">
+        <ul class="cb-slideshow">
+            @foreach($slider as $slide)
+                <li>
+                    <span>{{ $slide->image}}</span>
+                    <div>
+                        <h3>{{ $slide->header }}</h3>
+                        <p><b>{{ $slide->caption }}</b></p>
+                    </div>
+                </li>
+            @endforeach
+        </ul>
+    </div>
     <!-- The Band Section -->
     <div class="w3-container w3-content w3-center w3-padding-32" style="max-width:800px">
         <div class="w3-row w3-padding-32">
@@ -94,7 +98,6 @@
             </div>
         </div>
     </div>
-
     <!-- Ticket Modal -->
     <!--
     <div id="ticketModal" class="w3-modal">
