@@ -3,9 +3,13 @@
 <title>Grounded Earth</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="A Colorado based design firm specializing in the unusual.">
-<link rel="stylesheet" href="//www.w3schools.com/lib/w3.css">
+
+<!-- External stylesheets -->
+<!--<link rel="stylesheet" href="//www.w3schools.com/lib/w3.css">-->
+<link rel="stylesheet" href="{{ url('stylesheets/vendor/w3.css') }}">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<!-- Internal stylesheets -->
 <link rel="stylesheet" href="{{ url('stylesheets/background_slider.css') }}">
 <link rel="stylesheet" href="{{ url('stylesheets/styles.css') }}">
 
@@ -17,8 +21,8 @@
         <a class="w3-padding-large" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     </li>
     <li><a href="#" class="w3-hover-none w3-hover-text-grey w3-padding-large">Grounded Earth</a></li>
+    <li class="w3-hide-small"><a href="{{ url('products') }}" class="w3-padding-large">Products</a></li>
     <li class="w3-hide-small"><a href="#" class="w3-padding-large">Designs</a></li>
-    <li class="w3-hide-small"><a href="#" class="w3-padding-large">Products</a></li>
     <li class="w3-hide-small"><a href="#" class=" w3-padding-large">Sign Up</a></li>
     <!--
     <li class="w3-hide-small w3-dropdown-hover">
@@ -37,8 +41,8 @@
 <div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-top">
     <ul class="w3-navbar w3-left-align w3-black">
         <li><a class="w3-padding-large" href="#">Grounded Earth</a></li>
+        <li><a class="w3-padding-large" href="{{ url('products') }}">Products</a></li>
         <li><a class="w3-padding-large" href="#">Designs</a></li>
-        <li><a class="w3-padding-large" href="#">Products</a></li>
         <li><a class="w3-padding-large" href="#">Sign Up</a></li>
     </ul>
 </div>
@@ -169,11 +173,12 @@
     <p class="w3-medium">Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 
-<!-- external scripts -->
+<!-- External scripts -->
 <script src="//maps.googleapis.com/maps/api/js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<!-- local scripts -->
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>-->
+<script type="text/javascript" src="{{ url('javascripts/vendor/jquery.min.js') }}"></script>
 <script type="text/javascript" src="{{ url('stickerjs-master/sticker.min.js') }}"></script>
+<!-- Internal scripts -->
 <script type="text/javascript" src="{{ url('javascripts/w3_googlemaps.js') }}"></script>
 <script type="text/javascript" src="{{ url('javascripts/w3_javascripts.js') }}"></script>
 <script type="text/javascript" src="{{ url('javascripts/index.js') }}"></script>

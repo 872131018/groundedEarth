@@ -46,9 +46,19 @@ Route::get('/', function () {
       ],
   ];
 
-  return view('index', [
+  return view('frontend.index', [
       'products' => $products,
       'slider' => $slider
+  ]);
+});
+Route::get('/products', function () {
+  /*
+  * Get all the products to work with
+  */
+  $products = Product::all();
+
+  return view('frontend.products', [
+      'products' => $products
   ]);
 });
 /*
