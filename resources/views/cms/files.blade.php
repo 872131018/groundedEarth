@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.cms.app')
 
 @section('content')
 <div class="container">
@@ -6,7 +6,7 @@
     <div class="col-md-10 col-md-offset-1">
       <div class="panel panel-default">
         <div class="panel-heading">Dashboard</div>
-        <form action="{{ url('/files') }}" method="POST" id="dropzone" class="dropzone" role="form"></form>
+        <form action="{{ url('/admin/files') }}" method="POST" id="dropzone" class="dropzone" role="form"></form>
         <div class="panel-body">
           Files:
           <div class="grid">

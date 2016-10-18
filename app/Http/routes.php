@@ -99,29 +99,29 @@ Route::post('/inquiry', function(Request $request, Inquiry $inquiry) {
 */
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
-    Route::get('/home', 'HomeController@index');
+    Route::get('/admin', 'AdminController@index');
     /*
     * List the emails signed up for the website
     */
-    Route::get('/inquiries', 'InquiryController@index');
+    Route::get('/admin/inquiries', 'InquiryController@index');
     /*
     * File Routes
     */
-    Route::get('/files', 'FileController@index');
-    Route::delete('/files', 'FileController@delete');
-    Route::put('/files', 'FileController@add');
+    Route::get('/admin/files', 'FileController@index');
+    Route::delete('/admin/files', 'FileController@delete');
+    Route::put('/admin/files', 'FileController@add');
     /*
     * Show the product list
     */
-    Route::get('/products', 'ProductController@index');
-    Route::post('/products', 'ProductController@edit');
-    Route::put('/products', 'ProductController@add');
-    Route::delete('/products', 'ProductController@delete');
+    Route::get('/admin/products', 'ProductController@index');
+    Route::post('/admin/products', 'ProductController@edit');
+    Route::put('/admin/products', 'ProductController@add');
+    Route::delete('/admin/products', 'ProductController@delete');
     /*
     * Show the content block list
     */
-    Route::get('/content', 'ContentController@index');
-    Route::post('/content', 'ContentController@edit');
-    Route::put('/content', 'ContentController@add');
-    Route::delete('/content', 'ContentController@delete');
+    Route::get('/admin/content', 'ContentController@index');
+    Route::post('/admin/content', 'ContentController@edit');
+    Route::put('/admin/content', 'ContentController@add');
+    Route::delete('/admin/content', 'ContentController@delete');
 });

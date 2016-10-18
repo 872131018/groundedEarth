@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+/*
+* Include required classes
+*/
 use App\Http\Requests;
 use Illuminate\Http\Request;
-/*
-* Include product model
-*/
 use App\Product;
 
 class ProductController extends Controller {
@@ -27,7 +26,7 @@ class ProductController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function index() {
-      return view('products', [
+      return view('cms.products', [
           'products' => Product::all()
       ]);
   }
@@ -49,7 +48,7 @@ class ProductController extends Controller {
     * Eloquent magic for inserting and white list values
     */
     if($this->product->save()) {
-        return view('products', [
+        return view('cms.products', [
             'products' => Product::all()
         ]);
     } else {
@@ -78,7 +77,7 @@ class ProductController extends Controller {
     * Eloquent magic for inserting and white list values
     */
     if($this->product->save()) {
-        return view('products', [
+        return view('cms.products', [
             'products' => Product::all()
         ]);
     } else {
@@ -94,7 +93,7 @@ class ProductController extends Controller {
     */
     $product_to_delete = Product::find($request->id);
     if($product_to_delete->delete()) {
-      return view('products', [
+      return view('cms.products', [
         'products' => Product::all()
       ]);
     } else {

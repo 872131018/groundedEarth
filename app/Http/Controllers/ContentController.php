@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+/*
+* Include the required classes
+*/
 use App\Http\Requests;
 use Illuminate\Http\Request;
-/*
-* Include Content model
-*/
 use App\Content;
 
 class ContentController extends Controller {
@@ -30,7 +29,7 @@ class ContentController extends Controller {
         /*
         * Load the content list
         */
-        return view('content', [
+        return view('cms.content', [
           'contents' => Content::all()
         ]);
     }
@@ -47,7 +46,7 @@ class ContentController extends Controller {
     * Eloquent magic for inserting and white list values
     */
     if($this->content->save()) {
-        return view('content', [
+        return view('cms.content', [
             'contents' => Content::all()
         ]);
     } else {
@@ -71,7 +70,7 @@ class ContentController extends Controller {
     * Eloquent magic for inserting and white list values
     */
     if($this->content->save()) {
-        return view('content', [
+        return view('cms.content', [
             'contents' => Content::all()
         ]);
     } else {
@@ -87,7 +86,7 @@ class ContentController extends Controller {
     */
     $content_to_delete = Content::find($request->id);
     if($content_to_delete->delete()) {
-      return view('content', [
+      return view('cms.content', [
         'contents' => Content::all()
       ]);
     } else {

@@ -41,7 +41,7 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
+                    <li><a href="{{ url('/admin') }}">Home</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -57,10 +57,10 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
-                          <li><a href="{{ url('/content') }}"><i class="fa fa-btn"></i>Content</a></li>
-                          <li><a href="{{ url('/files') }}"><i class="fa fa-btn"></i>Files</a></li>
-                          <li><a href="{{ url('/products') }}"><i class="fa fa-btn"></i>Products</a></li>
-                          <li><a href="{{ url('/inquiries') }}"><i class="fa fa-btn"></i>Inquiries</a></li>
+                          <li><a href="{{ url('/admin/content') }}"><i class="fa fa-btn"></i>Content</a></li>
+                          <li><a href="{{ url('/admin/files') }}"><i class="fa fa-btn"></i>Files</a></li>
+                          <li><a href="{{ url('/admin/products') }}"><i class="fa fa-btn"></i>Products</a></li>
+                          <li><a href="{{ url('/admin/inquiries') }}"><i class="fa fa-btn"></i>Inquiries</a></li>
                           <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                         </ul>
                     </li>

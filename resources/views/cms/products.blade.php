@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.cms.app')
 
 @section('content')
 <div class="container">
@@ -6,7 +6,7 @@
     <div class="col-md-10 col-md-offset-1">
       <div class="panel panel-default">
         <div class="panel-heading">Dashboard</div>
-        <form action="{{ url('/products') }}" method="POST" role="form" class="form-horizontal">
+        <form action="{{ url('/admin/products') }}" method="POST" role="form" class="form-horizontal">
           <div class="form-group">
             <label for="name" class="control-label col-sm-2">Name</label>
             <div class="col-sm-8">

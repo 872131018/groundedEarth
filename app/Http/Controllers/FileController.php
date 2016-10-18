@@ -32,7 +32,7 @@ class FileController extends Controller {
       }
     }
 
-    return view('files', [
+    return view('cms.files', [
         'files' => $files
     ]);
   }
@@ -74,7 +74,7 @@ class FileController extends Controller {
         }
       }
 
-      return view('files', [
+      return view('cms.files', [
           'files' => $files
       ]);
     } else {

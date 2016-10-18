@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+/*
+* Include required models
+*/
 use App\Http\Requests;
 use Illuminate\Http\Request;
-/*
-* Include inquiry model
-*/
 use App\Inquiry;
 
 class InquiryController extends Controller
@@ -28,7 +27,7 @@ class InquiryController extends Controller
    * @return \Illuminate\Http\Response
    */
   public function index() {
-    return view('inquiries', [
+    return view('cms.inquiries', [
         'inquiries' => Inquiry::all()
     ]);
   }
