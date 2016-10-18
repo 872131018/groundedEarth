@@ -16,50 +16,55 @@ use App\Inquiry;
 |
 */
 Route::get('/', function () {
-  /*
-  * Get all the products to work with
-  */
-  $products = Product::where('type', 'Shirt')->take(3)->get();
-  /*
-  * Create an object to hold the slider data
-  */
-  $slider = [
-      (object) [
-          'image' => 'images/denverskyline.jpg',
-          'header' => 'Downtown Denver',
-          'caption' => 'What a legit place to do business!'
-      ],
-      (object) [
-          'image' => 'images/redrocks.jpg',
-          'header' => 'Rocky Mountains',
-          'caption' => 'In colorado, the mountains provide inspiration and relief.'
-      ],
-      (object) [
-          'image' => 'images/mountainflower.jpg',
-          'header' => 'Natural Escape',
-          'caption' => 'Fresh air and tranquil scenery, these are the Rockies.'
-      ],
-      (object) [
-          'image' => 'images/mountainlake.jpg',
-          'header' => 'Lakes Reflections',
-          'caption' => 'In colorado, the mountains provide inspiration and relief.'
-      ],
-  ];
+    /*
+    * Get all the products to work with
+    */
+    $products = Product::where('type', 'Shirt')->take(3)->get();
+    /*
+    * Create an object to hold the slider data
+    */
+    $slider = [
+        (object) [
+                'image' => 'images/denverskyline.jpg',
+                'header' => 'Downtown Denver',
+                'caption' => 'What a legit place to do business!'
+        ],
+        (object) [
+                'image' => 'images/redrocks.jpg',
+                'header' => 'Rocky Mountains',
+                'caption' => 'In colorado, the mountains provide inspiration and relief.'
+        ],
+        (object) [
+                'image' => 'images/mountainflower.jpg',
+                'header' => 'Natural Escape',
+                'caption' => 'Fresh air and tranquil scenery, these are the Rockies.'
+        ],
+        (object) [
+                'image' => 'images/mountainlake.jpg',
+                'header' => 'Lakes Reflections',
+                'caption' => 'In colorado, the mountains provide inspiration and relief.'
+        ]
+    ];
 
-  return view('frontend.index', [
-      'products' => $products,
-      'slider' => $slider
-  ]);
+    return view('frontend.index', [
+        'products' => $products,
+        'slider' => $slider
+    ]);
 });
 Route::get('/products', function () {
-  /*
-  * Get all the products to work with
-  */
-  $products = Product::all();
+    /*
+    * Get all the products to work with
+    */
+    $products = Product::all();
+    /*
+    echo '<pre>';
+    print_r($products);
+    echo '</pre>';
+    */
 
-  return view('frontend.products', [
-      'products' => $products
-  ]);
+    return view('frontend.products', [
+        'products' => $products
+    ]);
 });
 /*
 * Save the email through post
@@ -77,10 +82,10 @@ Route::post('/inquiry', function(Request $request, Inquiry $inquiry) {
     * Eloquent magic for inserting and white list values
     */
     if($inquiry->save()) {
-      $result = "true";
+        $result = "true";
     }
     else {
-      $result = "false";
+        $result = "false";
     }
     /*
     * send json response back
