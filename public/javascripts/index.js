@@ -1,16 +1,5 @@
 $(document).ready(function() {
     /*
-    * Initialize masonry image grid
-    */
-    $('.grid').masonry({
-    itemSelector: '.grid-item',
-    columnWidth: 200
-    });
-    /*
-    * Set the logo sticker
-    */
-    Sticker.init('.logo-sticker')
-    /*
     * Delegate all clicks to the document
     */
     $(document).on('click', '[data-delegate=signup]', function(event) {
@@ -26,4 +15,16 @@ $(document).ready(function() {
             }
         })
     })
-})
+});
+/*
+* Wait until all the images have loaded to get right grid
+*/
+$(window).load(function() {
+    /*
+    * Initialize masonry image grid
+    */
+    $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: 200
+    });
+});

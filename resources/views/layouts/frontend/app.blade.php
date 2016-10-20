@@ -58,11 +58,11 @@
     </footer>
 
     <!-- External scripts -->
-    <script src="//maps.googleapis.com/maps/api/js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="//maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <!--<script type="text/javascript" src="{{ url('javascripts/vendor/jquery.min.js') }}"></script>-->
     <script type="text/javascript" src="{{ url('stickerjs-master/sticker.min.js') }}"></script>
-    <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="//npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
     <!-- Internal scripts -->
     <script type="text/javascript" src="{{ url('javascripts/w3_googlemaps.js') }}"></script>
     <script type="text/javascript" src="{{ url('javascripts/w3_javascripts.js') }}"></script>

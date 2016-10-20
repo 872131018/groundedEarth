@@ -11,7 +11,7 @@ ul {
 * Logo as a sticker
 */
 .logo-sticker .sticker-img {
-		background-image: url(../images/grounded.jpg);
+	background-image: url(../images/grounded.jpg);
 }
 .sticker {
     width: 300px;

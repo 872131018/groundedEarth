@@ -1,12 +1,5 @@
 $(document).ready(function() {
   /*
-  * Initialize masonry image grid
-  */
-  $('.grid').masonry({
-  itemSelector: '.grid-item',
-  columnWidth: 200
-  });
-  /*
   * Dropzone init with config options
   */
   Dropzone.options.dropzone = {
@@ -21,4 +14,20 @@ $(document).ready(function() {
       });
     }
   };
+});
+/*
+* Wait until all the images have loaded to get right grid
+*/
+$(window).load(function() {
+    /*
+    * Initialize masonry image grid
+    */
+    $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: 200
+    });
+    /*
+    * Set the logo sticker
+    */
+    Sticker.init('.logo-sticker');
 });
