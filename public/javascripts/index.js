@@ -27,4 +27,8 @@ $(window).load(function() {
         itemSelector: '.grid-item',
         columnWidth: 200
     });
+    /*
+    * Set the logo sticker
+    */
+    Sticker.init('.logo-sticker');
 });

@@ -20,7 +20,7 @@
             <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
                 <a class="w3-padding-large" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
             </li>
-            <li><a href="#" class="w3-hover-none w3-hover-text-grey w3-padding-large">Grounded Earth</a></li>
+            <li><a href="{{ url('/') }}" class="w3-hover-none w3-hover-text-grey w3-padding-large">Grounded Earth</a></li>
             <li class="w3-hide-small"><a href="{{ url('products') }}" class="w3-padding-large">Products</a></li>
             <li class="w3-hide-small"><a href="#" class="w3-padding-large">Designs</a></li>
             <li class="w3-hide-small"><a href="#" class=" w3-padding-large">Sign Up</a></li>
