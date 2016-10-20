@@ -1,5 +1,12 @@
 $(document).ready(function() {
     /*
+    * Initialize masonry image grid
+    */
+    $('.grid').masonry({
+    itemSelector: '.grid-item',
+    columnWidth: 200
+    });
+    /*
     * Set the logo sticker
     */
     Sticker.init('.logo-sticker')

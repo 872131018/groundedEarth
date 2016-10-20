@@ -2,80 +2,75 @@
 
 @section('content')
 <!-- !PAGE CONTENT! -->
-<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
-
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-    <div class="w3-quarter">
-      <img src="/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
-        <h3>The Perfect Sandwich, A Real NYC Classic</h3>
-        <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="/w3images/steak.jpg" alt="Steak" style="width:100%">
-        <h3>Let Me Tell You About This Steak</h3>
-        <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="/w3images/cherries.jpg" alt="Cherries" style="width:100%">
-        <h3>Cherries, interrupted</h3>
-        <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-        <p>What else?</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="/w3images/wine.jpg" alt="Pasta and Wine" style="width:100%">
-        <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
-        <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-  </div>
-
-  <!-- Second Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center">
-    <div class="w3-quarter">
-      <img src="/w3images/popsicle.jpg" alt="Popsicle" style="width:100%">
-        <h3>All I Need Is a Popsicle</h3>
-        <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="/w3images/salmon.jpg" alt="Salmon" style="width:100%">
-        <h3>Salmon For Your Skin</h3>
-        <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">
-        <h3>The Perfect Sandwich, A Real Classic</h3>
-        <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="/w3images/croissant.jpg" alt="Croissant" style="width:100%">
-        <h3>Le French</h3>
-        <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-  </div>
-
-  <!-- Pagination -->
-  <div class="w3-center w3-padding-32">
-    <ul class="w3-pagination">
-      <li><a class="w3-black" href="#">1</a></li>
-      <li><a class="w3-hover-black" href="#">2</a></li>
-      <li><a class="w3-hover-black" href="#">3</a></li>
-      <li><a class="w3-hover-black" href="#">4</a></li>
-      <li><a class="w3-hover-black" href="#">»</a></li>
-    </ul>
-  </div>
-  <hr>
-
-  <!-- About Section -->
-  <div class="w3-padding-32 w3-center" id="about">
-    <h2 class="w3-center">About</h2><br>
-    <img src="/w3images/chef.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
-    <div class="w3-padding-32">
-      <h4><b>I am Who I Am!</b></h4>
-      <h6><i>With Passion For Real, Good Food</i></h6>
-      <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-    </div>
-  </div>
-  <hr>
-<!-- End page content -->
+<div class="w3-section w3-bottombar w3-padding-64">
+    <span class="w3-margin-right">Filter:</span>
+    <button class="w3-btn w3-hover-black">ALL</button>
+    <button class="w3-btn w3-white w3-hover-black"><i class="w3-margin-right"></i>T-Shirt</button>
+    <button class="w3-btn w3-white w3-hover-black"><i class="w3-margin-right"></i>Hoodie</button>
 </div>
+
+<div class="w3-main w3-content w3-margin-top" style="max-width:1200px;">
+    <div class="grid w3-row-padding w3-center">
+        @foreach($products as $product)
+            <div class="grid-item">
+                <img src="{{ url('images/'.$product->image) }}" alt="{{ $product->name }}" class="w3-hover-opacity">
+                <div class="w3-container w3-white">
+                    <p><b>{{ $product->name }}</b></p>
+                    <p>{{ $product->description }}</p>
+                    <p class="w3-opacity">{{ $product->price }}</p>
+                    <button class="w3-btn w3-margin-bottom">Buy Now!</button>
+                </div>
+            </div>
+        @endforeach
+    </div>
+
+    <!-- Pagination -->
+    <div class="w3-center w3-padding-32">
+        <ul class="w3-pagination">
+            <li><a class="w3-black" href="#">1</a></li>
+            <li><a class="w3-hover-black" href="#">2</a></li>
+            <li><a class="w3-hover-black" href="#">3</a></li>
+            <li><a class="w3-hover-black" href="#">4</a></li>
+            <li><a class="w3-hover-black" href="#">»</a></li>
+        </ul>
+    </div>
+    <hr>
+
+    <!-- The Contact Section -->
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+        <h2 class="w3-wide w3-center">Contact</h2>
+        <p class="w3-opacity w3-center"><i>Want to reach out? Drop a note!</i></p>
+        <div class="w3-row w3-padding-32">
+            <div class="w3-col m6 w3-large w3-margin-bottom">
+                <i class="fa fa-map-marker" style="width:30px"></i> Denver, US<br>
+                <i class="fa fa-phone" style="width:30px"></i> Phone: 970 303 1234<br>
+                <i class="fa fa-envelope" style="width:30px"> </i> Email: superemail@mail.com<br>
+            </div>
+            <div class="w3-col m6">
+                <form>
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" name="name" placeholder="Name">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" name="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" name="city" placeholder="City">
+                        </div>
+                        <div class="w3-half">
+                            <input class="w3-input w3-border" type="text" name="state" placeholder="State">
+                        </div>
+                    </div>
+                    <input class="w3-input w3-border" type="text" name="comment" placeholder="Comment">
+                    {{ csrf_field() }}
+                    <button class="w3-btn w3-section w3-right" type="button" data-delegate="signup">SEND</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End page content -->
 @endsection
